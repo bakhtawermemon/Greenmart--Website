@@ -11,6 +11,8 @@
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
         crossorigin="anonymous"></script>
     <script src="https://code.iconify.design/iconify-icon/2.1.0/iconify-icon.min.js"></script>
+    <link rel="stylesheet" href="./index.css">
+
 </head>
 
 <body>
@@ -48,431 +50,1393 @@
     </div>
 
     <!-- Header Section -->
-     <header class=" position-sticky top-0 z-1 bg-white shadow-sm py-3">
-    <div class="container py-3">
-        <div class="row align-items-center">
-          
-            <div class="col-6 col-lg-2 d-flex align-items-center">
-                <img src="./images/logo.svg" alt="Logo" class="me-2"> <!-- Add your logo here -->
+    <header class=" position-sticky top-0 z-1 bg-white ">
+        <div class="container py-3">
+            <div class="row align-items-center">
 
-            </div>
+                <div class="col-6 col-lg-2 d-flex align-items-center">
+                    <img src="./images/logo.svg" alt="Logo" class="me-2">
 
-            
-            <div class="col-lg-4 d-none d-lg-flex">
-                <div class="input-group">
-                    <input type="text" class="form-control" placeholder="Search for...">
-                    <button class="btn btn-outline-secondary " type="button" id="button-search">
-                        <iconify-icon icon="basil:search-outline"></iconify-icon>
+                </div>
+
+
+                <div class="col-lg-4 d-none d-lg-flex">
+                    <div class="input-group">
+                        <input type="text" class="form-control" placeholder="Search for...">
+                        <button class="btn btn-outline-secondary " type="button" id="button-search">
+                            <iconify-icon icon="basil:search-outline"></iconify-icon>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="col-lg-6 d-none d-lg-flex justify-content-end">
+                    <div class="d-flex align-items-center">
+                        <div class="text-center me-4">
+                            <span class="fw-bold">
+                                Online Shopping</span>
+                            <div class="d-flex align-items-center">
+                                <iconify-icon class="fs-3 me-3 text-success"
+                                    icon="mynaui:telephone-solid"></iconify-icon>
+
+                                <span>+78 925-942-2900</span>
+                            </div>
+                        </div>
+                        <div class="text-center me-4">
+                            <span class="fw-bold">Account</span>
+                            <div class="d-flex align-items-center">
+                                <iconify-icon class="fs-3 me-3 text-success" icon="mdi:account"></iconify-icon>
+                                <span>Login/Register</span>
+                            </div>
+                        </div>
+
+                        <button class="btn btn-success d-flex align-items-center">
+                            <iconify-icon class="fs-2 me-3" icon="mdi:cart"></iconify-icon>Cart <br> $0.00
+                        </button>
+                    </div>
+                </div>
+                <div class="col-6 d-lg-none text-end">
+                    <button class="btn btn-outline-secondary" type="button" data-bs-toggle="offcanvas"
+                        data-bs-target="#offcanvasMenu">
+                        <iconify-icon icon="mingcute:menu-fill"></iconify-icon>
                     </button>
                 </div>
             </div>
+        </div>
+    </header>
 
-            <div class="col-lg-6 d-none d-lg-flex justify-content-end">
-                <div class="d-flex align-items-center">
-                    <div class="text-center me-4">
-                        <span class="fw-bold">
-                            Online Shopping</span>
-                        <div class="d-flex align-items-center">
-                            <iconify-icon class="fs-3 me-3 text-success" icon="mynaui:telephone-solid"></iconify-icon>
-
-                            <span>+78 925-942-2900</span>
-                        </div>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm d-flex justify-content-between">
+            <div class="container-fluid">
+                <div class="d-flex justify-content-between w-100">
+                    <div>
+                        <!-- You can put a logo here if needed, but as per your request, it's not included -->
                     </div>
-                    <div class="text-center me-4">
-                        <span class="fw-bold">Account</span>
-                        <div class="d-flex align-items-center">
-                            <iconify-icon class="fs-3 me-3 text-success" icon="mdi:account"></iconify-icon>
-                            <span>Login/Register</span>
-                        </div>
+                    <div class="collapse navbar-collapse" id="navbarNav">
+                        <ul class="navbar-nav mx-auto  py-2">
+                            <li class="nav-item dropdown mx-3 ">
+                                <a class="nav-link dropdown-toggle px-5 border-end" href="#" id="homeDropdown"
+                                    role="button" data-bs-toggle="dropdown" aria-expanded="false">Home</a>
+                                <ul class="dropdown-menu" aria-labelledby="homeDropdown">
+                                    <li><a class="dropdown-item" href="#">Home Default</a></li>
+                                    <li><a class="dropdown-item" href="#">Home 1</a></li>
+                                    <li><a class="dropdown-item" href="#">Home 2</a></li>
+                                    <li><a class="dropdown-item" href="#">Home 3</a></li>
+                                    <li><a class="dropdown-item" href="#">Home 4</a></li>
+                                    <li><a class="dropdown-item" href="#">Home 5</a></li>
+                                    <li><a class="dropdown-item" href="#">Catalog Mode</a></li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown  mx-3">
+                                <a class="nav-link dropdown-toggle px-5 border-end" href="#" id="shopDropdown"
+                                    role="button" data-bs-toggle="dropdown" aria-expanded="false">Shop</a>
+                                <ul class="dropdown-menu" aria-labelledby="shopDropdown">
+                                    <li><a class="dropdown-item" href="#">Shop Default Grid</a></li>
+                                    <li><a class="dropdown-item" href="#">Shop Left Sidebar</a></li>
+                                    <li><a class="dropdown-item" href="#">Shop Right Sidebar</a></li>
+                                    <li><a class="dropdown-item" href="#">Flash Sales</a></li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown  mx-3">
+                                <a class="nav-link dropdown-toggle px-5 border-end" href="#" id="pagesDropdown"
+                                    role="button" data-bs-toggle="dropdown" aria-expanded="false">Pages</a>
+                                <ul class="dropdown-menu" aria-labelledby="pagesDropdown">
+                                    <li><a class="dropdown-item" href="#">About Us</a></li>
+                                    <li><a class="dropdown-item" href="#">Contact Us</a></li>
+                                    <li><a class="dropdown-item" href="#">FAQs</a></li>
+                                </ul>
+                            </li>
+                            <li class="nav-item  mx-3">
+                                <a class="nav-link px-5 border-end" href="#">Vegetables</a>
+                            </li>
+                            <li class="nav-item  mx-3">
+                                <a class="nav-link px-5 border-end" href="#">Blog</a>
+                            </li>
+                            <li class="nav-item  mx-3">
+                                <a class="nav-link px-5 border-end" href="#">Flash Sales</a>
+                            </li>
+                        </ul>
                     </div>
-
-                    <button class="btn btn-success d-flex align-items-center">
-                        <iconify-icon class="fs-2 me-3" icon="mdi:cart"></iconify-icon>Cart <br> $0.00
-                    </button>
                 </div>
             </div>
-            <div class="col-6 d-lg-none text-end">
-                <button class="btn btn-outline-secondary" type="button" data-bs-toggle="offcanvas"
-                    data-bs-target="#offcanvasMenu">
-                    <iconify-icon icon="mingcute:menu-fill"></iconify-icon>
-                </button>
+        </nav>
+    </header>
+
+    <!-- hero section Large screen  -->
+    <div id="carouselExampleFade" class="carousel d-none d-sm-none d-md-block" data-bs-ride="carousel">
+        <div class="carousel-inner">
+            <!-- First Slide -->
+            <div class="carousel-item active">
+                <img src="./images/hero-img1.jpg" class=" w-100" alt="Fresh Meat">
+                <div class="carousel-caption  text-end">
+                    <h2 class="fw-bold">Farm Fresh Meat &</h2>
+                    <p class="fs-1">Poultry <span class="fw-bold">100% Organic.</span></p>
+                    <p class="fs-5">Always fresh organic products.</p>
+                    <a href="#" class="btn btn-warning btn-lg">Shop Now</a>
+                </div>
+            </div>
+
+            <!-- Second Slide -->
+            <div class="carousel-item">
+                <img src="./images/heroimg-2.jpg" class=" w-100" alt="Fresh Vegetables">
+                <div class="carousel-caption  text-end">
+                    <h2 class="fw-bold">Farm Fresh Vegetables &</h2>
+                    <p class="fw-bold fs-3">Food 100% Organic.</p>
+                    <p>Always fresh organic products for you.</p>
+                    <a href="#" class="btn btn-warning btn-lg">Shop Now</a>
+                </div>
+            </div>
+        </div>
+        <button class="carousel-control-prev p-3" type="button " data-bs-target="#carouselExampleFade"
+            data-bs-slide="prev">
+            <span class="carousel-control-prev-icon " aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+
+    </div>
+    <!-- Hero section small screen  -->
+
+    <div class="d-sm-block d-md-none">
+        <div id="carouselExampleFade" class="carousel" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <!-- First Slide -->
+                <div class="carousel-item active">
+                    <img src="./images/hero-img1.jpg" class="w-100" alt="Fresh Meat">
+                    <div class="carousel-caption text-end"
+                        style="position: absolute; top: 0; right: 0; left: 0; bottom: 0; display: flex; flex-direction: column; justify-content: center; align-items: flex-end; padding: 20px; background: rgba(0, 0, 0, 0.4); color: white;">
+                        <h2 style="font-size: 1.5rem;">Farm Fresh Meat &</h2>
+                        <p style="font-size: 1rem;">Poultry <span>100% Organic.</span></p>
+                        <p style="font-size: 0.9rem;">Always fresh organic products.</p>
+                        <a href="#" class="btn btn-warning btn-lg">Shop Now</a>
+                    </div>
+                </div>
+
+                <!-- Second Slide -->
+                <div class="carousel-item">
+                    <img src="./images/heroimg-2.jpg" class="w-100" alt="Fresh Vegetables">
+                    <div class="carousel-caption text-end"
+                        style="position: absolute; top: 0; right: 0; left: 0; bottom: 0; display: flex; flex-direction: column; justify-content: center; align-items: flex-end; padding: 20px; background: rgba(0, 0, 0, 0.4); color: white;">
+                        <h2 style="font-size: 1.5rem;">Farm Fresh Vegetables &</h2>
+                        <p style="font-size: 1rem;">Food 100% Organic.</p>
+                        <p style="font-size: 0.9rem;">Always fresh organic products for you.</p>
+                        <a href="#" class="btn btn-warning btn-lg">Shop Now</a>
+                    </div>
+                </div>
+            </div>
+
+            <button class="carousel-control-prev p-3" type="button" data-bs-target="#carouselExampleFade"
+                data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade"
+                data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+    </div>
+
+    <div class="bg-light">
+        <div class="text-center py-3">
+            <span class="text-secondary-emphasis fw-bold">Free Shipping On All Orders Over $99.</span>
+            <span class="text-success fw-bold">#staysafecovid19</span>
+        </div>
+    </div>
+    <!-- 4 cards -->
+    <div class="container pt-5 mt-5">
+        <div class="row">
+            <!-- Card 1 -->
+            <div class="col-lg-3 col-md-3 col-sm-6 col-6 mb-4 border-end">
+                <div class="card text-center border-0 bg-transparent">
+                    <div class="elementor-icon-box-icon d-flex justify-content-center align-items-center">
+                        <span class="elementor-icon elementor-animation-">
+                            <iconify-icon class="display-5 text text-success"
+                                icon="solar:star-line-duotone"></iconify-icon>
+                        </span>
+                    </div>
+                    <div class="elementor-icon-box-content">
+                        <h3 class="elementor-icon-box-title">
+                            <span class="fs-3 text-black">Top Rank Farms</span>
+                        </h3>
+                        <p class="text-secondary">
+                            Ut facilisis luctus elit id ornare. <br> Aenean non sem risus.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <!-- Card 2 -->
+            <div class="col-lg-3 col-md-3 col-sm-6 col-6 mb-4 border-end">
+                <div class="card text-center border-0 bg-transparent">
+                    <div class="elementor-icon-box-icon d-flex justify-content-center align-items-center">
+                        <span class="elementor-icon elementor-animation-">
+                            <iconify-icon class="display-5 text text-success" icon="mdi:verified"></iconify-icon>
+                        </span>
+                    </div>
+                    <div class="elementor-icon-box-content">
+                        <h3 class="elementor-icon-box-title">
+                            <span class="fs-3 text-black">Organic Certificated</span>
+                        </h3>
+                        <p class="text-secondary">
+                            Etiam tempus nulla et dolor sagittis <br> eu ultricies.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <!-- Card 3 -->
+            <div class="col-lg-3 col-md-3 col-sm-6 col-6 mb-4 border-end">
+                <div class="card text-center border-0 bg-transparent">
+                    <div class="elementor-icon-box-icon d-flex justify-content-center align-items-center">
+                        <span class="elementor-icon elementor-animation-">
+                            <iconify-icon class="display-5 text text-success" icon="streamline:flash-2"></iconify-icon>
+                        </span>
+                    </div>
+                    <div class="elementor-icon-box-content">
+                        <h3 class="elementor-icon-box-title">
+                            <span class="fs-3 text-black">Fast Delivery</span>
+                        </h3>
+                        <p class="text-secondary">
+                            Ut facilisis luctus elit id ornare. <br> Aenean non sem risus.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <!-- Card 4 -->
+            <div class="col-lg-3 col-md-3 col-sm-6 col-6 mb-4">
+                <div class="card text-center border-0 bg-transparent">
+                    <div class="elementor-icon-box-icon d-flex justify-content-center align-items-center">
+                        <span class="elementor-icon elementor-animation-">
+                            <iconify-icon class="display-5 text text-success"
+                                icon="icon-park-outline:done-all"></iconify-icon>
+                        </span>
+                    </div>
+                    <div class="elementor-icon-box-content">
+                        <h3 class="elementor-icon-box-title">
+                            <span class="fs-3 text-black">Trusted Products</span>
+                        </h3>
+                        <p class="text-secondary">
+                            Etiam tempus nulla et dolo.
+                        </p>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
-</header>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    <!-- Offcanvas Menu for Mobile and Tablet -->
-    <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasMenu" aria-labelledby="offcanvasMenuLabel">
+    <!-- 4 images -->
+    <div class="container py-5">
+        <div class="row">
+            <div class="col-lg-3 col-md-3 col-6 mt-2">
+                <img src="./images/011.jpg" alt="" class="img-fluid">
+            </div>
+            <div class="col-lg-3 col-md-3 col-6 mt-2">
+                <img src="./images/01.jpg" alt="" class="img-fluid">
+            </div>
+            <div class="col-lg-3 col-md-3 col-6 mt-2">
+                <img src="./images/03.jpg" alt="" class="img-fluid">
+            </div>
+            <div class="col-lg-3 col-md-3 col-6 mt-2">
+                <img src="./images/04.jpg" alt="" class="img-fluid">
+            </div>
+        </div>
+    </div>
+    <!-- 5 cards -->
+    <div class="container py-5">
+        <div class=" d-flex justify-content-between">
+            <h3 class="text-black fw-bold">Daily Chilled Vegetables</h3>
+            <p class="text-success">Shop all</p>
+        </div>
+        <div class="row">
+            <div class="col-lg-1 d-none d-sm-none d-lg-block"></div>
+            <div class="col-lg-2 mb-4  d-none d-sm-none d-lg-block">
+                <div class=" text-center h-100 card-hover bg-0">
+
+                    <div class="image-container position-relative">
+                        <img src="./images/product-01-291x291.jpg" class="card-img-top main-image"
+                            alt="Orange Peel Zest">
+                        <img src="./images/product-02-291x291.jpg" class="card-img-top second-image"
+                            alt="Alternate Image">
+                        <div class="icon-overlay">
+                            <div class="icon-bg mt-5 d-flex justify-content-around align-items-center ">
+                                <div>
+                                    <iconify-icon icon="mdi:heart-outline"></iconify-icon> Wishlist
+                                </div>
+                                <div>
+                                    <iconify-icon icon="carbon:view"></iconify-icon> Quickview
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <button
+                        class="border bg-white rounded-3  text-black mt-4 d-flex justify-content-start align-items-center px-4">
+                        Betterfoods
+                    </button>
+
+
+                    <div class="card-body d-flex flex-column text-start">
+
+                        <h6 class="card-title  mt-2">Zesco Ripe Bananas</h6>
+                        <p class="card-text">Betterfoods</p>
+                        <p class="card-text">350g</p>
+                        <div class="mb-2">
+                            <span><iconify-icon class="fs-5" icon="openmoji:star"></iconify-icon><iconify-icon
+                                    class="fs-5" icon="openmoji:star"></iconify-icon><iconify-icon class="fs-5"
+                                    icon="openmoji:star"></iconify-icon><iconify-icon class="fs-5"
+                                    icon="openmoji:star"></iconify-icon><iconify-icon class="fs-5 me-1"
+                                    icon="mdi-light:star"></iconify-icon>3</span>
+                        </div>
+                        <p class="text-danger">$120.00</p>
+                        <button class=" btn-successs mt-auto text-white  fw-bold border-0 rounded-3 py-2"><iconify-icon
+                                class="fs-5 mt-1 me-3" icon="mynaui:cart-solid"></iconify-icon>Add to cart</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Second Card -->
+            <div class="col-lg-2 mb-4  d-none d-sm-none d-lg-block">
+                <div class="text-center h-100 card-hover">
+                    <div class="image-container position-relative">
+                        <img src="./images/product-02-291x291.jpg" class="card-img-top main-image" alt="Lemon Zest">
+                        <img src="./images/product-03-291x291.jpg" class="card-img-top second-image"
+                            alt="Alternate Image">
+                        <div class="icon-overlay">
+                            <div class="icon-bg d-flex justify-content-around align-items-center py-2">
+                                <div>
+                                    <iconify-icon icon="mdi:heart-outline"></iconify-icon> Wishlist
+                                </div>
+                                <div>
+                                    <iconify-icon icon="carbon:view"></iconify-icon> Quickview
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <button
+                        class="border bg-white rounded-3  text-black mt-4 d-flex justify-content-start align-items-center px-4">
+                        Iceberg Foods
+                    </button>
+
+                    <div class="card-body d-flex flex-column text-start">
+                        <h6 class="card-title mt-2">Orange Peel Zest</h6>
+                        <p class="card-text">Iceberg Foods</p>
+                        <p class="card-text">350g</p>
+                        <div class="mb-2">
+                            <span><iconify-icon class="fs-5" icon="openmoji:star"></iconify-icon><iconify-icon
+                                    class="fs-5" icon="openmoji:star"></iconify-icon><iconify-icon class="fs-5 "
+                                    icon="mdi-light:star"></iconify-icon><iconify-icon class="fs-5 "
+                                    icon="mdi-light:star"></iconify-icon><iconify-icon class="fs-5 me-1"
+                                    icon="mdi-light:star"></iconify-icon>0</span>
+                        </div>
+                        <p class="text-danger">$45.00</p>
+                        <button class=" btn-successs mt-auto text-white  fw-bold border-0 rounded-3 py-2"><iconify-icon
+                                class="fs-5 mt-1 me-3" icon="mynaui:cart-solid"></iconify-icon>Add to cart</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Third Card -->
+            <div class="col-lg-2 col-md-4  mb-4  d-none d-sm-none d-md-block">
+                <div class="text-center h-100 card-hover">
+                    <div class="image-container position-relative">
+                        <img src="./images/product-03-291x291.jpg" class="card-img-top main-image" alt="Lime Zest">
+                        <img src="./images/product-02-291x291.jpg" class="card-img-top second-image"
+                            alt="Alternate Image">
+                        <div class="icon-overlay">
+                            <div class="icon-bg d-flex justify-content-around align-items-center py-2">
+                                <div>
+                                    <iconify-icon icon="mdi:heart-outline"></iconify-icon> Wishlist
+                                </div>
+                                <div>
+                                    <iconify-icon icon="carbon:view"></iconify-icon> Quickview
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <button
+                        class="border bg-white rounded-3  text-black mt-4 d-flex justify-content-start align-items-center px-4">
+                        fusion foods
+                    </button>
+
+                    <div class="card-body d-flex flex-column text-start">
+                        <h5 class="card-title mt-2">Tesco Green Seedless</h5>
+                        <p class="card-text">Fusion Foods</p>
+                        <p class="card-text">450g</p>
+                        <span><iconify-icon class="fs-5" icon="openmoji:star"></iconify-icon><iconify-icon class="fs-5"
+                                icon="openmoji:star"></iconify-icon><iconify-icon class="fs-5"
+                                icon="openmoji:star"></iconify-icon><iconify-icon class="fs-5"
+                                icon="openmoji:star"></iconify-icon><iconify-icon class="fs-5 me-1"
+                                icon="openmoji:star"></iconify-icon>1</span>
+                        <p class="text-danger mt-2">$40.00</p>
+                        <button class=" btn-successs mt-auto text-white  fw-bold border-0 rounded-3 py-2"><iconify-icon
+                                class="fs-5 mt-1 me-3" icon="mynaui:cart-solid"></iconify-icon>Read more</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Fourth Card -->
+            <div class="col-lg-2 col-md-4 col-6 mb-4">
+                <div class=" text-center h-100 card-hover">
+                    <div class="image-container position-relative">
+                        <img src="./images/product-04-291x291.jpg" class="card-img-top main-image" alt="Ginger Spice">
+                        <img src="./images/product-07-291x291.jpg" class="card-img-top second-image"
+                            alt="Alternate Image">
+                        <div class="icon-overlay">
+                            <div class="icon-bg d-flex justify-content-around align-items-center py-2">
+                                <div>
+                                    <iconify-icon icon="mdi:heart-outline"></iconify-icon> Wishlist
+                                </div>
+                                <div>
+                                    <iconify-icon icon="carbon:view"></iconify-icon> Quickview
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <button
+                        class="border bg-white rounded-3  text-black mt-4 d-flex justify-content-start align-items-center px-4">
+                        Holy Roots
+                    </button>
+
+                    <div class="card-body d-flex flex-column text-start">
+                        <h6 class="card-title mt-2">Waterfi SwimActive</h6>
+                        <p class="card-text">Holy Roots</p>
+                        <p class="card-text">350g</p>
+                        <div class="mb-2">
+                            <span><iconify-icon class="fs-5" icon="openmoji:star"></iconify-icon>
+                                <iconify-icon class="fs-5" icon="mdi-light:star"></iconify-icon><iconify-icon
+                                    class="fs-5" icon="mdi-light:star"></iconify-icon><iconify-icon class="fs-5"
+                                    icon="mdi-light:star"></iconify-icon><iconify-icon class="fs-5 me-1"
+                                    icon="mdi-light:star"></iconify-icon>0</span>
+                        </div>
+                        <p class="text-danger">$100.00</p>
+                        <button class=" btn-successs mt-auto text-white  fw-bold border-0 rounded-3 py-2"><iconify-icon
+                                class="fs-5 mt-1 me-3" icon="mynaui:cart-solid"></iconify-icon>Add to cart</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Fifth Card -->
+            <div class="col-lg-2 col-md-4 col-6 mb-4 ">
+                <div class=" text-center h-100 card-hover">
+                    <div class="image-container position-relative">
+                        <img src="./images/product-05-291x291.jpg" class="card-img-top main-image"
+                            alt="Garlic Granules">
+                        <img src="./images/product-04-291x291.jpg" class="card-img-top second-image"
+                            alt="Alternate Image">
+                        <div class="icon-overlay">
+                            <div class="icon-bg d-flex justify-content-around align-items-center py-2">
+                                <div>
+                                    <iconify-icon icon="mdi:heart-outline"></iconify-icon> Wishlist
+                                </div>
+                                <div>
+                                    <iconify-icon icon="carbon:view"></iconify-icon> Quickview
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <button
+                        class="border bg-white rounded-3  text-black mt-4 d-flex justify-content-start align-items-center px-4">
+                        Urban Foody
+                    </button>
+
+                    <div class="card-body d-flex flex-column text-start">
+                        <h6 class="card-title mt-2">Tesco Coconut</h6>
+                        <p class="card-text">Iceberg Foods</p>
+                        <p class="card-text">450g</p>
+                        <div class="mb-2">
+                            <span><iconify-icon class="fs-5" icon="openmoji:star"></iconify-icon><iconify-icon
+                                    class="fs-5" icon="openmoji:star"></iconify-icon><iconify-icon class="fs-5"
+                                    icon="mdi-light:star"></iconify-icon><iconify-icon class="fs-5"
+                                    icon="mdi-light:star"></iconify-icon><iconify-icon class="fs-5 me-1"
+                                    icon="mdi-light:star"></iconify-icon>0</span>
+                        </div>
+                        <p class="text-danger">$80.00</p>
+                        <button class=" btn-successs mt-auto text-white  fw-bold border-0 rounded-3 py-2"><iconify-icon
+                                class="fs-5 mt-1 me-3" icon="mynaui:cart-solid"></iconify-icon>Add to cart</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-1  d-none d-sm-none d-lg-block"></div>
+        </div>
+
+    </div>
+
+    <div class="container ">
+        <div class="row mt-5 align-items-center">
+            <div class="col-md-6 col-12">
+                <img class="img-fluid" src="./images/banner-05.jpg" alt="Organic Vegetables" width="90%">
+            </div>
+            <div class="col-md-6 col-12 mt-4">
+                <h1 class="text-black fw-bold">Organic Vegetables Everyday</h1>
+                <h3 class="text-success mt-2 fs-5">Your online resource of healthy recipes.</h3>
+                <p class="text-secondary mt-3">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    Nullam vulputate ultrices libero ut vehicula. In sit amet
+                    arcu libero. Proin fringilla dui sed arcu fringilla tristique
+                    eget ultricies elit.
+                </p>
+                <button type="button" class="btn btn-warning">Shop Now</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="bg-img mt-5">
+        <div class=" container pt-5 d-flex justify-content-between">
+            <h3 class="text-black fw-bold">Featured Fresh Fruits</h3>
+            <p class="text-success">Shop all</p>
+        </div>
+
+        <div class="container text-center bg-white shadow-sm mt-4">
+            <div class="row">
+                <div class="col-lg-1 d-none d-sm-none d-lg-block"></div>
+                <div class="col-lg-2 mb-4  d-none d-sm-none d-lg-block">
+                    <div class=" text-center h-100 card-hover bg-0">
+
+                        <div class="image-container position-relative">
+                            <img src="./images/product-01-291x291.jpg" class="card-img-top main-image"
+                                alt="Orange Peel Zest">
+                            <img src="./images/product-02-291x291.jpg" class="card-img-top second-image"
+                                alt="Alternate Image">
+                            <div class="icon-overlay">
+                                <div class="icon-bg mt-5 d-flex justify-content-around align-items-center ">
+                                    <div>
+                                        <iconify-icon icon="mdi:heart-outline"></iconify-icon> Wishlist
+                                    </div>
+                                    <div>
+                                        <iconify-icon icon="carbon:view"></iconify-icon> Quickview
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <button
+                            class="border bg-white rounded-3  text-black mt-4 d-flex justify-content-start align-items-center px-4">
+                            Betterfoods
+                        </button>
+
+
+                        <div class="card-body d-flex flex-column text-start">
+
+                            <h6 class="card-title  mt-2">Zesco Ripe Bananas</h6>
+                            <p class="card-text">Betterfoods</p>
+                            <p class="card-text">350g</p>
+                            <div class="mb-2">
+                                <span><iconify-icon class="fs-5" icon="openmoji:star"></iconify-icon><iconify-icon
+                                        class="fs-5" icon="openmoji:star"></iconify-icon><iconify-icon class="fs-5"
+                                        icon="openmoji:star"></iconify-icon><iconify-icon class="fs-5"
+                                        icon="openmoji:star"></iconify-icon><iconify-icon class="fs-5 me-1"
+                                        icon="mdi-light:star"></iconify-icon>3</span>
+                            </div>
+                            <p class="text-danger">$120.00</p>
+                            <button
+                                class=" btn-successs mt-auto text-white  fw-bold border-0 rounded-3 py-2"><iconify-icon
+                                    class="fs-5 mt-1 me-3" icon="mynaui:cart-solid"></iconify-icon>Add to cart</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Second Card -->
+                <div class="col-lg-2 mb-4  d-none d-sm-none d-lg-block">
+                    <div class="text-center h-100 card-hover">
+                        <div class="image-container position-relative">
+                            <img src="./images/product-02-291x291.jpg" class="card-img-top main-image" alt="Lemon Zest">
+                            <img src="./images/product-03-291x291.jpg" class="card-img-top second-image"
+                                alt="Alternate Image">
+                            <div class="icon-overlay">
+                                <div class="icon-bg d-flex justify-content-around align-items-center py-2">
+                                    <div>
+                                        <iconify-icon icon="mdi:heart-outline"></iconify-icon> Wishlist
+                                    </div>
+                                    <div>
+                                        <iconify-icon icon="carbon:view"></iconify-icon> Quickview
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <button
+                            class="border bg-white rounded-3  text-black mt-4 d-flex justify-content-start align-items-center px-4">
+                            Iceberg Foods
+                        </button>
+
+                        <div class="card-body d-flex flex-column text-start">
+                            <h6 class="card-title mt-2">Orange Peel Zest</h6>
+                            <p class="card-text">Iceberg Foods</p>
+                            <p class="card-text">350g</p>
+                            <div class="mb-2">
+                                <span><iconify-icon class="fs-5" icon="openmoji:star"></iconify-icon><iconify-icon
+                                        class="fs-5" icon="openmoji:star"></iconify-icon><iconify-icon class="fs-5 "
+                                        icon="mdi-light:star"></iconify-icon><iconify-icon class="fs-5 "
+                                        icon="mdi-light:star"></iconify-icon><iconify-icon class="fs-5 me-1"
+                                        icon="mdi-light:star"></iconify-icon>0</span>
+                            </div>
+                            <p class="text-danger">$45.00</p>
+                            <button
+                                class=" btn-successs mt-auto text-white  fw-bold border-0 rounded-3 py-2"><iconify-icon
+                                    class="fs-5 mt-1 me-3" icon="mynaui:cart-solid"></iconify-icon>Add to cart</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Third Card -->
+                <div class="col-lg-2 col-md-4  mb-4  d-none d-sm-none d-md-block">
+                    <div class="text-center h-100 card-hover">
+                        <div class="image-container position-relative">
+                            <img src="./images/product-03-291x291.jpg" class="card-img-top main-image" alt="Lime Zest">
+                            <img src="./images/product-02-291x291.jpg" class="card-img-top second-image"
+                                alt="Alternate Image">
+                            <div class="icon-overlay">
+                                <div class="icon-bg d-flex justify-content-around align-items-center py-2">
+                                    <div>
+                                        <iconify-icon icon="mdi:heart-outline"></iconify-icon> Wishlist
+                                    </div>
+                                    <div>
+                                        <iconify-icon icon="carbon:view"></iconify-icon> Quickview
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <button
+                            class="border bg-white rounded-3  text-black mt-4 d-flex justify-content-start align-items-center px-4">
+                            fusion foods
+                        </button>
+
+                        <div class="card-body d-flex flex-column text-start">
+                            <h5 class="card-title mt-2">Tesco Green Seedless</h5>
+                            <p class="card-text">Fusion Foods</p>
+                            <p class="card-text">450g</p>
+                            <span><iconify-icon class="fs-5" icon="openmoji:star"></iconify-icon><iconify-icon
+                                    class="fs-5" icon="openmoji:star"></iconify-icon><iconify-icon class="fs-5"
+                                    icon="openmoji:star"></iconify-icon><iconify-icon class="fs-5"
+                                    icon="openmoji:star"></iconify-icon><iconify-icon class="fs-5 me-1"
+                                    icon="openmoji:star"></iconify-icon>1</span>
+                            <p class="text-danger mt-2">$40.00</p>
+                            <button
+                                class=" btn-successs mt-auto text-white  fw-bold border-0 rounded-3 py-2"><iconify-icon
+                                    class="fs-5 mt-1 me-3" icon="mynaui:cart-solid"></iconify-icon>Read more</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Fourth Card -->
+                <div class="col-lg-2 col-md-4 col-6 mb-4">
+                    <div class=" text-center h-100 card-hover">
+                        <div class="image-container position-relative">
+                            <img src="./images/product-04-291x291.jpg" class="card-img-top main-image"
+                                alt="Ginger Spice">
+                            <img src="./images/product-07-291x291.jpg" class="card-img-top second-image"
+                                alt="Alternate Image">
+                            <div class="icon-overlay">
+                                <div class="icon-bg d-flex justify-content-around align-items-center py-2">
+                                    <div>
+                                        <iconify-icon icon="mdi:heart-outline"></iconify-icon> Wishlist
+                                    </div>
+                                    <div>
+                                        <iconify-icon icon="carbon:view"></iconify-icon> Quickview
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <button
+                            class="border bg-white rounded-3  text-black mt-4 d-flex justify-content-start align-items-center px-4">
+                            Holy Roots
+                        </button>
+
+                        <div class="card-body d-flex flex-column text-start">
+                            <h6 class="card-title mt-2">Waterfi SwimActive</h6>
+                            <p class="card-text">Holy Roots</p>
+                            <p class="card-text">350g</p>
+                            <div class="mb-2">
+                                <span><iconify-icon class="fs-5" icon="openmoji:star"></iconify-icon>
+                                    <iconify-icon class="fs-5" icon="mdi-light:star"></iconify-icon><iconify-icon
+                                        class="fs-5" icon="mdi-light:star"></iconify-icon><iconify-icon class="fs-5"
+                                        icon="mdi-light:star"></iconify-icon><iconify-icon class="fs-5 me-1"
+                                        icon="mdi-light:star"></iconify-icon>0</span>
+                            </div>
+                            <p class="text-danger">$100.00</p>
+                            <button
+                                class=" btn-successs mt-auto text-white  fw-bold border-0 rounded-3 py-2"><iconify-icon
+                                    class="fs-5 mt-1 me-3" icon="mynaui:cart-solid"></iconify-icon>Add to cart</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Fifth Card -->
+                <div class="col-lg-2 col-md-4 col-6 mb-4">
+                    <div class=" text-center h-100 card-hover">
+                        <div class="image-container position-relative">
+                            <img src="./images/product-05-291x291.jpg" class="card-img-top main-image"
+                                alt="Garlic Granules">
+                            <img src="./images/product-04-291x291.jpg" class="card-img-top second-image"
+                                alt="Alternate Image">
+                            <div class="icon-overlay">
+                                <div class="icon-bg d-flex justify-content-around align-items-center py-2">
+                                    <div>
+                                        <iconify-icon icon="mdi:heart-outline"></iconify-icon> Wishlist
+                                    </div>
+                                    <div>
+                                        <iconify-icon icon="carbon:view"></iconify-icon> Quickview
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <button
+                            class="border bg-white rounded-3  text-black mt-4 d-flex justify-content-start align-items-center px-4">
+                            Urban Foody
+                        </button>
+
+                        <div class="card-body d-flex flex-column text-start">
+                            <h6 class="card-title mt-2">Tesco Coconut</h6>
+                            <p class="card-text">Iceberg Foods</p>
+                            <p class="card-text">450g</p>
+                            <div class="mb-2">
+                                <span><iconify-icon class="fs-5" icon="openmoji:star"></iconify-icon><iconify-icon
+                                        class="fs-5" icon="openmoji:star"></iconify-icon><iconify-icon class="fs-5"
+                                        icon="mdi-light:star"></iconify-icon><iconify-icon class="fs-5"
+                                        icon="mdi-light:star"></iconify-icon><iconify-icon class="fs-5 me-1"
+                                        icon="mdi-light:star"></iconify-icon>0</span>
+                            </div>
+                            <p class="text-danger">$80.00</p>
+                            <button
+                                class=" btn-successs mt-auto text-white  fw-bold border-0 rounded-3 py-2"><iconify-icon
+                                    class="fs-5 mt-1 me-3" icon="mynaui:cart-solid"></iconify-icon>Add to cart</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-1  d-none d-sm-none d-lg-block"></div>
+            </div>
+        </div>
+
+        <div class="container  mt-3">
+            <div class="row mt-5">
+                <div class="col-md-6 col-lg-6 col-sm-12 col-12 mb-3">
+                    <div>
+                        <img class="img-fluid" src="./images/banner-06.jpg" alt="">
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-6 col-sm-12 col-12 mb-5 text-end">
+                    <div>
+                        <img class="img-fluid" src="./images/banner-07.jpg" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="pt-5 d-flex justify-content-between">
+            <h3 class="text-black fw-bold">Shop By Category</h3>
+            <p class="text-success">Shop all categories</p>
+        </div>
+        <div class="row g-0 py-4">
+
+            <div class="col-lg-2 col-md-4 col-sm-6 col-6">
+                <div class="card text-center">
+                    <img src="./images/cat-01.jpg" class="card-img-top img-fluid" alt="Fruit">
+                    <div class="card-body">
+                        <h5 class="card-title">Fruit</h5>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-2 col-md-4 col-sm-6 col-6">
+                <div class="card text-center">
+                    <img src="./images/cat-02.jpg" class="card-img-top img-fluid" alt="Vegetables">
+                    <div class="card-body">
+                        <h5 class="card-title">Vegetables</h5>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-2 col-md-4 col-sm-6 col-6">
+                <div class="card text-center">
+                    <img src="./images/cat-03.jpg" class="card-img-top img-fluid" alt="Meat & Poultry">
+                    <div class="card-body">
+                        <h5 class="card-title">Meat & Poultry</h5>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-2 col-md-4 col-sm-6 col-6">
+                <div class="card text-center">
+                    <img src="./images/cat-04.jpg" class="card-img-top img-fluid" alt="Fish & Seafood">
+                    <div class="card-body">
+                        <h5 class="card-title">Fish & Seafood</h5>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-2 col-md-4 col-sm-6 col-6">
+                <div class="card text-center">
+                    <img src="./images/cat-05.jpg" class="card-img-top img-fluid" alt="Dairy & Eggs">
+                    <div class="card-body">
+                        <h5 class="card-title">Dairy & Eggs</h5>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-2 col-md-4 col-sm-6 col-6">
+                <div class="card text-center">
+                    <img src="./images/cat-06.jpg" class="card-img-top img-fluid" alt="Milk & Drinks">
+                    <div class="card-body">
+                        <h5 class="card-title">Milk & Drinks</h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+
+    <!-- 10 cards -->
+    <div>
+        <div class="container">
+            <div class="row">
+
+                <div class="pt-5 pb-3 d-flex justify-content-between">
+                    <h3 class="text-black fw-bold">Recommended For You</h3>
+                    <p class="text-success">Shop all</p>
+                </div>
+                <div class="col-lg-4 mb-4 col-sm-12 text-center d-lg-block">
+                    <img src="./images/banner-product.jpg" alt="">
+                </div>
+                <!-- Second Card -->
+                <div class="col-lg-2 mb-4 col-6 d-lg-block">
+                    <div class=" text-center h-100 card-hover bg-0">
+
+                        <div class="image-container position-relative">
+                            <img src="./images/product-01-291x291.jpg" class="card-img-top main-image"
+                                alt="Orange Peel Zest">
+                            <img src="./images/product-02-291x291.jpg" class="card-img-top second-image"
+                                alt="Alternate Image">
+                            <div class="icon-overlay">
+                                <div class="icon-bg mt-5 d-flex justify-content-around align-items-center ">
+                                    <div>
+                                        <iconify-icon icon="mdi:heart-outline"></iconify-icon> Wishlist
+                                    </div>
+                                    <div>
+                                        <iconify-icon icon="carbon:view"></iconify-icon> Quickview
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <button
+                            class="border bg-white rounded-3  text-black mt-4 d-flex justify-content-start align-items-center px-4">
+                            Betterfoods
+                        </button>
+
+
+                        <div class="card-body d-flex flex-column text-start">
+
+                            <h6 class="card-title  mt-2">Zesco Ripe Bananas</h6>
+                            <p class="card-text">Betterfoods</p>
+                            <p class="card-text">350g</p>
+                            <div class="mb-2">
+                                <span><iconify-icon class="fs-5" icon="openmoji:star"></iconify-icon><iconify-icon
+                                        class="fs-5" icon="openmoji:star"></iconify-icon><iconify-icon class="fs-5"
+                                        icon="openmoji:star"></iconify-icon><iconify-icon class="fs-5"
+                                        icon="openmoji:star"></iconify-icon><iconify-icon class="fs-5 me-1"
+                                        icon="mdi-light:star"></iconify-icon>3</span>
+                            </div>
+                            <p class="text-danger">$120.00</p>
+                            <button
+                                class=" btn-successs mt-auto text-white  fw-bold border-0 rounded-3 py-2"><iconify-icon
+                                    class="fs-5 mt-1 me-3" icon="mynaui:cart-solid"></iconify-icon>Add to cart</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Third Card -->
+                <div class="col-lg-2 col-md-4  mb-4 col-6 d-md-block">
+                    <div class="text-center h-100 card-hover">
+                        <div class="image-container position-relative">
+                            <img src="./images/product-02-291x291.jpg" class="card-img-top main-image" alt="Lemon Zest">
+                            <img src="./images/product-03-291x291.jpg" class="card-img-top second-image"
+                                alt="Alternate Image">
+                            <div class="icon-overlay">
+                                <div class="icon-bg d-flex justify-content-around align-items-center py-2">
+                                    <div>
+                                        <iconify-icon icon="mdi:heart-outline"></iconify-icon> Wishlist
+                                    </div>
+                                    <div>
+                                        <iconify-icon icon="carbon:view"></iconify-icon> Quickview
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <button
+                            class="border bg-white rounded-3  text-black mt-4 d-flex justify-content-start align-items-center px-4">
+                            Iceberg Foods
+                        </button>
+
+                        <div class="card-body d-flex flex-column text-start">
+                            <h6 class="card-title mt-2">Orange Peel Zest</h6>
+                            <p class="card-text">Iceberg Foods</p>
+                            <p class="card-text">350g</p>
+                            <div class="mb-2">
+                                <span><iconify-icon class="fs-5" icon="openmoji:star"></iconify-icon><iconify-icon
+                                        class="fs-5" icon="openmoji:star"></iconify-icon><iconify-icon class="fs-5 "
+                                        icon="mdi-light:star"></iconify-icon><iconify-icon class="fs-5 "
+                                        icon="mdi-light:star"></iconify-icon><iconify-icon class="fs-5 me-1"
+                                        icon="mdi-light:star"></iconify-icon>0</span>
+                            </div>
+                            <p class="text-danger">$45.00</p>
+                            <button
+                                class=" btn-successs mt-auto text-white  fw-bold border-0 rounded-3 py-2"><iconify-icon
+                                    class="fs-5 mt-1 me-3" icon="mynaui:cart-solid"></iconify-icon>Add to cart</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Fourth Card -->
+                <div class="col-lg-2 col-md-4 col-6 mb-4">
+                    <div class="text-center h-100 card-hover">
+                        <div class="image-container position-relative">
+                            <img src="./images/product-03-291x291.jpg" class="card-img-top main-image" alt="Lime Zest">
+                            <img src="./images/product-02-291x291.jpg" class="card-img-top second-image"
+                                alt="Alternate Image">
+                            <div class="icon-overlay">
+                                <div class="icon-bg d-flex justify-content-around align-items-center py-2">
+                                    <div>
+                                        <iconify-icon icon="mdi:heart-outline"></iconify-icon> Wishlist
+                                    </div>
+                                    <div>
+                                        <iconify-icon icon="carbon:view"></iconify-icon> Quickview
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <button
+                            class="border bg-white rounded-3  text-black mt-4 d-flex justify-content-start align-items-center px-4">
+                            fusion foods
+                        </button>
+
+                        <div class="card-body d-flex flex-column text-start">
+                            <h6 class="card-title mt-2">Tesco Green Seedless</h6>
+                            <p class="card-text">Fusion Foods</p>
+                            <p class="card-text">450g</p>
+                            <div class="mb-2">
+                                <span><iconify-icon class="fs-5" icon="openmoji:star"></iconify-icon><iconify-icon
+                                        class="fs-5" icon="openmoji:star"></iconify-icon><iconify-icon class="fs-5"
+                                        icon="openmoji:star"></iconify-icon><iconify-icon class="fs-5"
+                                        icon="openmoji:star"></iconify-icon><iconify-icon class="fs-5 me-1"
+                                        icon="openmoji:star"></iconify-icon>1</span>
+                            </div>
+                            <p class="text-danger">$40.00</p>
+                            <button
+                                class=" btn-successs mt-auto text-white  fw-bold border-0 rounded-3 py-2 mt-3"><iconify-icon
+                                    class="fs-5 mt-1 me-3" icon="mynaui:cart-solid"></iconify-icon>Read more</button>
+                        </div>
+
+
+                    </div>
+                </div>
+
+                <!-- fifth card -->
+                <div class="col-lg-2 col-md-4 col-6 mb-4">
+                    <div class=" text-center h-100 card-hover">
+                        <div class="image-container position-relative">
+                            <img src="./images/product-04-291x291.jpg" class="card-img-top main-image"
+                                alt="Ginger Spice">
+                            <img src="./images/product-07-291x291.jpg" class="card-img-top second-image"
+                                alt="Alternate Image">
+                            <div class="icon-overlay">
+                                <div class="icon-bg d-flex justify-content-around align-items-center py-2">
+                                    <div>
+                                        <iconify-icon icon="mdi:heart-outline"></iconify-icon> Wishlist
+                                    </div>
+                                    <div>
+                                        <iconify-icon icon="carbon:view"></iconify-icon> Quickview
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <button
+                            class="border bg-white rounded-3  text-black mt-4 d-flex justify-content-start align-items-center px-4">
+                            Holy Roots
+                        </button>
+
+                        <div class="card-body d-flex flex-column text-start">
+                            <h6 class="card-title mt-2">Waterfi SwimActive</h6>
+                            <p class="card-text">Holy Roots</p>
+                            <p class="card-text">350g</p>
+                            <div class="mb-2">
+                                <span><iconify-icon class="fs-5" icon="openmoji:star"></iconify-icon>
+                                    <iconify-icon class="fs-5" icon="mdi-light:star"></iconify-icon><iconify-icon
+                                        class="fs-5" icon="mdi-light:star"></iconify-icon><iconify-icon class="fs-5"
+                                        icon="mdi-light:star"></iconify-icon><iconify-icon class="fs-5 me-1"
+                                        icon="mdi-light:star"></iconify-icon>0</span>
+                            </div>
+                            <p class="text-danger">$100.00</p>
+                            <button
+                                class=" btn-successs mt-auto text-white  fw-bold border-0 rounded-3 py-2 mt-3"><iconify-icon
+                                    class="fs-5 mt-1 me-3" icon="mynaui:cart-solid"></iconify-icon>Add to cart</button>
+                        </div>
+                    </div>
+
+                </div>
+
+
+            </div>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-1 d-none d-sm-none d-lg-block"></div>
+                <div class="col-lg-2 mb-4  d-none d-sm-none d-lg-block">
+                    <div class=" text-center h-100 card-hover">
+                        <div class="image-container position-relative">
+                            <img src="./images/product-05-291x291.jpg" class="card-img-top main-image"
+                                alt="Garlic Granules">
+                            <img src="./images/product-04-291x291.jpg" class="card-img-top second-image"
+                                alt="Alternate Image">
+                            <div class="icon-overlay">
+                                <div class="icon-bg d-flex justify-content-around align-items-center py-2">
+                                    <div>
+                                        <iconify-icon icon="mdi:heart-outline"></iconify-icon> Wishlist
+                                    </div>
+                                    <div>
+                                        <iconify-icon icon="carbon:view"></iconify-icon> Quickview
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <button
+                            class="border bg-white rounded-3  text-black mt-4 d-flex justify-content-start align-items-center px-4">
+                            Urban Foody
+                        </button>
+
+                        <div class="card-body d-flex flex-column text-start">
+                            <h6 class="card-title mt-2">Tesco Coconut</h6>
+                            <p class="card-text">Iceberg Foods</p>
+                            <p class="card-text">450g</p>
+                            <div class="mb-2">
+                                <span><iconify-icon class="fs-5" icon="openmoji:star"></iconify-icon><iconify-icon
+                                        class="fs-5" icon="openmoji:star"></iconify-icon><iconify-icon class="fs-5"
+                                        icon="mdi-light:star"></iconify-icon><iconify-icon class="fs-5"
+                                        icon="mdi-light:star"></iconify-icon><iconify-icon class="fs-5 me-1"
+                                        icon="mdi-light:star"></iconify-icon>0</span>
+                            </div>
+                            <p class="text-danger">$80.00</p>
+                            <button
+                                class=" btn-successs mt-auto text-white  fw-bold border-0 rounded-3 py-2"><iconify-icon
+                                    class="fs-5 mt-1 me-3" icon="mynaui:cart-solid"></iconify-icon>Add to cart</button>
+                        </div>
+                    </div>
+                </div>
+                <!-- Second Card -->
+                <div class="col-lg-2 mb-4  d-none d-sm-none d-lg-block mx-3">
+                    <div class=" text-center h-100 card-hover bg-0">
+
+                        <div class="image-container position-relative">
+                            <img src="./images/product-06-291x291.jpg" class="card-img-top main-image"
+                                alt="Orange Peel Zest">
+                            <img src="./images/product-07-291x291.jpg" class="card-img-top second-image"
+                                alt="Alternate Image">
+                            <div class="icon-overlay">
+                                <div class="icon-bg mt-5 d-flex justify-content-around align-items-center ">
+                                    <div>
+                                        <iconify-icon icon="mdi:heart-outline"></iconify-icon> Wishlist
+                                    </div>
+                                    <div>
+                                        <iconify-icon icon="carbon:view"></iconify-icon> Quickview
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <button
+                            class="border bg-white rounded-3  text-black mt-4 d-flex justify-content-start align-items-center px-4">
+                            Betterfoods
+                        </button>
+
+
+                        <div class="card-body d-flex flex-column text-start">
+
+                            <h6 class="card-title  mt-2">Zesco Ripe Bananas</h6>
+                            <p class="card-text">Betterfoods</p>
+                            <p class="card-text">350g</p>
+                            <div class="mb-2">
+                                <span><iconify-icon class="fs-5" icon="openmoji:star"></iconify-icon><iconify-icon
+                                        class="fs-5" icon="openmoji:star"></iconify-icon><iconify-icon class="fs-5"
+                                        icon="openmoji:star"></iconify-icon><iconify-icon class="fs-5"
+                                        icon="openmoji:star"></iconify-icon><iconify-icon class="fs-5 me-1"
+                                        icon="mdi-light:star"></iconify-icon>3</span>
+                            </div>
+                            <p class="text-danger">$120.00</p>
+                            <button
+                                class=" btn-successs mt-auto text-white  fw-bold border-0 rounded-3 py-2"><iconify-icon
+                                    class="fs-5 mt-1 me-3" icon="mynaui:cart-solid"></iconify-icon>Add to cart</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Third Card -->
+                <div class="col-lg-2 col-md-4  mb-4  d-none d-sm-none d-md-block mx-3">
+                    <div class="text-center h-100 card-hover">
+                        <div class="image-container position-relative">
+                            <img src="./images/product-07-291x291.jpg" class="card-img-top main-image" alt="Lemon Zest">
+                            <img src="./images/product-04-291x291.jpg" class="card-img-top second-image"
+                                alt="Alternate Image">
+                            <div class="icon-overlay">
+                                <div class="icon-bg d-flex justify-content-around align-items-center py-2">
+                                    <div>
+                                        <iconify-icon icon="mdi:heart-outline"></iconify-icon> Wishlist
+                                    </div>
+                                    <div>
+                                        <iconify-icon icon="carbon:view"></iconify-icon> Quickview
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <button
+                            class="border bg-white rounded-3  text-black mt-4 d-flex justify-content-start align-items-center px-4">
+                            Iceberg Foods
+                        </button>
+
+                        <div class="card-body d-flex flex-column text-start">
+                            <h6 class="card-title mt-2">Orange Peel Zest</h6>
+                            <p class="card-text">Iceberg Foods</p>
+                            <p class="card-text">350g</p>
+                            <div class="mb-2">
+                                <span><iconify-icon class="fs-5" icon="openmoji:star"></iconify-icon><iconify-icon
+                                        class="fs-5" icon="openmoji:star"></iconify-icon><iconify-icon class="fs-5 "
+                                        icon="mdi-light:star"></iconify-icon><iconify-icon class="fs-5 "
+                                        icon="mdi-light:star"></iconify-icon><iconify-icon class="fs-5 me-1"
+                                        icon="mdi-light:star"></iconify-icon>0</span>
+                            </div>
+                            <p class="text-danger">$45.00</p>
+                            <button
+                                class=" btn-successs mt-auto text-white  fw-bold border-0 rounded-3 py-2"><iconify-icon
+                                    class="fs-5 mt-1 me-3" icon="mynaui:cart-solid"></iconify-icon>Add to cart</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Fourth Card -->
+                <div class="col-lg-2 col-md-4 col-6 mb-4 mx-2">
+                    <div class="text-center h-100 card-hover">
+                        <div class="image-container position-relative">
+                            <img src="./images/product-08-291x291.jpg" class="card-img-top main-image" alt="Lime Zest">
+                            <img src="./images/product-07-291x291.jpg" class="card-img-top second-image"
+                                alt="Alternate Image">
+                            <div class="icon-overlay">
+                                <div class="icon-bg d-flex justify-content-around align-items-center py-2">
+                                    <div>
+                                        <iconify-icon icon="mdi:heart-outline"></iconify-icon> Wishlist
+                                    </div>
+                                    <div>
+                                        <iconify-icon icon="carbon:view"></iconify-icon> Quickview
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <button
+                            class="border bg-white rounded-3  text-black mt-4 d-flex justify-content-start align-items-center px-4">
+                            fusion foods
+                        </button>
+
+                        <div class="card-body d-flex flex-column text-start">
+                            <h5 class="card-title mt-2">Tesco Green Seedless</h5>
+                            <p class="card-text">Fusion Foods</p>
+                            <p class="card-text">450g</p>
+                            <span><iconify-icon class="fs-5" icon="openmoji:star"></iconify-icon><iconify-icon
+                                    class="fs-5" icon="openmoji:star"></iconify-icon><iconify-icon class="fs-5"
+                                    icon="openmoji:star"></iconify-icon><iconify-icon class="fs-5"
+                                    icon="openmoji:star"></iconify-icon><iconify-icon class="fs-5 me-1"
+                                    icon="openmoji:star"></iconify-icon>1</span>
+                            <p class="text-danger mt-2">$40.00</p>
+                            <button
+                                class=" btn-successs mt-auto text-white  fw-bold border-0 rounded-3 py-2"><iconify-icon
+                                    class="fs-5 mt-1 me-3" icon="mynaui:cart-solid"></iconify-icon>Read more</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- fifth card -->
+                <div class="col-lg-2 col-md-4 col-6 mb-4 mx-2">
+                    <div class=" text-center h-100 card-hover">
+                        <div class="image-container position-relative">
+                            <img src="./images/product-09-291x291.jpg" class="card-img-top main-image"
+                                alt="Ginger Spice">
+                            <img src="./images/product-10-291x291.jpg" class="card-img-top second-image"
+                                alt="Alternate Image">
+                            <div class="icon-overlay">
+                                <div class="icon-bg d-flex justify-content-around align-items-center py-2">
+                                    <div>
+                                        <iconify-icon icon="mdi:heart-outline"></iconify-icon> Wishlist
+                                    </div>
+                                    <div>
+                                        <iconify-icon icon="carbon:view"></iconify-icon> Quickview
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <button
+                            class="border bg-white rounded-3  text-black mt-4 d-flex justify-content-start align-items-center px-4">
+                            Holy Roots
+                        </button>
+
+                        <div class="card-body d-flex flex-column text-start">
+                            <h6 class="card-title mt-2">Waterfi SwimActive</h6>
+                            <p class="card-text">Holy Roots</p>
+                            <p class="card-text">350g</p>
+                            <div class="mb-2">
+                                <span><iconify-icon class="fs-5" icon="openmoji:star"></iconify-icon>
+                                    <iconify-icon class="fs-5" icon="mdi-light:star"></iconify-icon><iconify-icon
+                                        class="fs-5" icon="mdi-light:star"></iconify-icon><iconify-icon class="fs-5"
+                                        icon="mdi-light:star"></iconify-icon><iconify-icon class="fs-5 me-1"
+                                        icon="mdi-light:star"></iconify-icon>0</span>
+                            </div>
+                            <p class="text-danger">$100.00</p>
+                            <button
+                                class=" btn-successs mt-auto text-white  fw-bold border-0 rounded-3 py-2"><iconify-icon
+                                    class="fs-5 mt-1 me-3" icon="mynaui:cart-solid"></iconify-icon>Add to cart</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-1 d-none d-sm-none d-lg-block"></div>
+            </div>
+        </div>
+    </div>
+    <!-- Contact Section -->
+    <div class="bg-light">
+        <div class="container mt-3 py-5">
+            <p class="text-secondary"><span class="fs-5 fw-bold">GreenMart</span> makes online grocery delivery and
+                grocery shopping fast and easy. Get groceries delivered and order the best of seasonal farm fresh food,
+                great local finds, quick meal solutions, incredible new products and exclusives, and all of your
+                favorite grocery brands. It’s supermarket delivery with so much more: from Fresh Deals that help you
+                save big to convenient delivery windows that work around your schedule, we’ve thought of everything to
+                make grocery home delivery simple for you. We’re a grocery delivery service you can trust as we source
+                only the highest-quality products and deliver them directly to your door.></p>
+            <div class="row pt-4">
+                <div class="col-lg-4 col-md-4 col-sm-12 mb-4">
+                    <div class="bg-white shadow-sm py-4 rounded-4 text-center">
+                        <div class="card-body d-flex align-items-center">
+                            <iconify-icon style="font-size: 48px;" class="mx-3 text-success"
+                                icon="ph:house-line-fill"></iconify-icon> <!-- Added right margin -->
+                            <div>
+                                <p class="card-title">Home Online Shopping</p>
+                                <p class="card-text">
+                                <h5>+78 925-942-2900</h5>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="col-lg-4 col-md-4 col-sm-12 mb-4">
+                    <div class="bg-white shadow-sm py-4 rounded-4 text-center">
+                        <div class="card-body d-flex align-items-center">
+                            <iconify-icon style="font-size: 48px;" class="mx-3 text-info"
+                                icon="ph:phone-call-fill"></iconify-icon>
+                            <div>
+                                <p class="card-title text-start">Support Center
+                                <p>
+                                <p class="card-text">
+                                <h5>+78 925-942-2901</h5>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-4 col-sm-12 mb-4">
+                    <div class="bg-white shadow-sm py-4 rounded-4 text-center">
+                        <div class="card-body d-flex align-items-center">
+                            <iconify-icon style="font-size: 48px;" class="mx-3 text-warning"
+                                icon="dashicons:store"></iconify-icon>
+                            <div>
+                                <p class="card-title text-start ">Store Locations</p>
+                                <p class="card-text">
+                                <h5>View all 5 stores</h5>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- footer secton -->
+    <footer class="bg-white pt-4 text-dark">
+        <div class="container py-4">
+            <div class="row align-items-center text-center text-md-start">
+                <div class="col-md-4 col-12 mb-2 text-start">
+                    <img class="img-fluid" src="./images/logo.svg" alt="">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque id luctus mauris, eget varius
+                        libero. Vestibulum metus leo.</p>
+                    <p class="text-success fs-5">
+                        <iconify-icon class="me-2 fs-5 text-black"
+                            icon="ic:outline-email"></iconify-icon>contact@example.com
+                    </p>
+                    <p>
+                        <iconify-icon class="me-2 fs-5 text-black" icon="line-md:phone"></iconify-icon>+884 123 456 789
+                    </p>
+                    <p>
+                        <iconify-icon class="me-2 fs-5 text-black" icon="material-symbols:house"></iconify-icon>70 West
+                        Buckingham Ave, NY 11735
+                    </p>
+                    <div class="d-flex justify-content-start justify-content-md-start">
+                        <a href="#" class="me-3 bg-light text-black p-1 px-2 rounded-circle">
+                            <iconify-icon class="fs-4 mt-1" icon="ri:facebook-fill"></iconify-icon>
+                        </a>
+                        <a href="#" class="me-3 bg-light text-black p-1 px-2 rounded-circle">
+                            <iconify-icon class="fs-4 mt-1" icon="ri:instagram-line"></iconify-icon>
+                        </a>
+                        <a href="#" class="me-3 bg-light text-black p-1 px-2 rounded-circle">
+                            <iconify-icon class="fs-4 mt-1" icon="mdi:twitter"></iconify-icon>
+                        </a>
+                        <a href="#" class="me-3 bg-light text-black p-1 px-2 rounded-circle">
+                            <iconify-icon class="fs-4 mt-1" icon="ri:linkedin-fill"></iconify-icon>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-md-2 col-6 mb-5 pb-3 pt-3 text-start">
+                    <h5 class="fw-bold">ABOUT</h5>
+                    <a href="#" class="text-dark text-decoration-none">About Us</a><br>
+                    <a href="#" class="text-dark text-decoration-none">Contact Us</a><br>
+                    <a href="#" class="text-dark text-decoration-none">Help Center</a>
+                </div>
+                <div class="col-md-2 col-6 mb-5 pb-3 pt-3 text-start">
+                    <h5 class="fw-bold">HELP & GUIDE</h5>
+                    <a href="#" class="text-dark text-decoration-none">Term Of Use</a><br>
+                    <a href="#" class="text-dark text-decoration-none">Privacy Policy</a><br>
+                    <a href="#" class="text-dark text-decoration-none">Shipping & Delivery</a>
+                </div>
+                <div class="col-md-4 col-12 mb-3 text-start">
+                    <h5 class="fw-bold">NEWSLETTER</h5>
+                    <p>Don’t miss out on thousands of great deals & promotions.</p>
+                    <div class="mb-3">
+                        <div class="input-group">
+                            <input type="email" class="form-control" placeholder="Email address..."
+                                aria-label="Email address">
+                        </div>
+                        <div class="d-flex justify-content-start mt-2">
+                            <button class="border-0 rounded-2 fw-bold py-2 fs-5 px-3 btn-successs text-white"
+                                type="button">Subscribe</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="text-secondary py-5">
+                <div class="container">
+                    <div class="row align-items-center">
+                        <div class="col-md-6 text-md-start text-center mb-3 mb-md-0">
+                            <p class="mb-0">© 2023 Pizza. All rights reserved</p>
+                        </div>
+                        <div class="col-md-6 text-md-end text-center">
+                            <img class="img-fluid" src="./images/payment.png" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+
+      <!-- Offcanvas Menu for Mobile and Tablet -->
+      <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasMenu" aria-labelledby="offcanvasMenuLabel">
         <div class="offcanvas-header">
             <h5 class="offcanvas-title" id="offcanvasMenuLabel">Menu</h5>
             <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
@@ -488,8 +1452,4 @@
             </ul>
         </div>
     </div>
-
-
 </body>
-
-</html>

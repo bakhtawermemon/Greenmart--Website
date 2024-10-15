@@ -1,0 +1,62 @@
+.bg-img {
+    background-image: url(../images/bg-home1-01.jpg);
+    background-size: cover;
+    background-position: center;
+    height: auto;
+}
+
+.btn-successs {
+    background-color: #00A250;
+}
+
+.image-container {
+    position: relative;
+    cursor: pointer;
+}
+
+.second-image {
+    display: none;
+}
+
+.image-container:hover .second-image {
+    display: block;
+}
+
+.image-container:hover .main-image {
+    display: none;
+}
+
+.card-hover {
+    border: none;
+}
+
+.card-hover:hover {
+    border: 2px solid #ddd;
+    padding: 0px 10px;
+}
+
+.icon-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: none;
+}
+
+.icon-bg {
+    background-color: white;
+    border-top: 1px solid #ddd;
+}
+
+.image-container:hover .icon-overlay {
+    display: block;
+}
+
+.icon-overlay div {
+    margin: 5px;
+    cursor: pointer;
+}
+
+.icon-overlay i {
+    margin-right: 5px;
+}
