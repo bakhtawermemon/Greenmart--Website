@@ -11,7 +11,7 @@
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
         crossorigin="anonymous"></script>
     <script src="https://code.iconify.design/iconify-icon/2.1.0/iconify-icon.min.js"></script>
-    <link rel="stylesheet" href="./index.css">
+    <link rel="stylesheet" href="./style.css/index.css">
 
 </head>
 
@@ -54,7 +54,7 @@
         <div class="container py-3">
             <div class="row align-items-center">
 
-                <div class="col-6 col-lg-2 d-flex align-items-center">
+                <div class="col-6 col-lg-2 d-none d-lg-block d-flex align-items-center">
                     <img src="./images/logo.svg" alt="Logo" class="me-2">
 
                 </div>
@@ -85,7 +85,8 @@
                             <span class="fw-bold">Account</span>
                             <div class="d-flex align-items-center">
                                 <iconify-icon class="fs-3 me-3 text-success" icon="mdi:account"></iconify-icon>
-                                <span>Login/Register</span>
+                                <span><a href="./Pages/login.html" class="text-black">Login</a>/<a
+                                        href="./Pages/register.html" class="text-black">Register</a></span>
                             </div>
                         </div>
 
@@ -94,12 +95,33 @@
                         </button>
                     </div>
                 </div>
-                <div class="col-6 d-lg-none text-end">
-                    <button class="btn btn-outline-secondary" type="button" data-bs-toggle="offcanvas"
-                        data-bs-target="#offcanvasMenu">
-                        <iconify-icon icon="mingcute:menu-fill"></iconify-icon>
-                    </button>
+                <!-- Container to hold all elements in one row -->
+                <div class="d-lg-none d-flex justify-content-between align-items-center p-2">
+                    <!-- Left-aligned menu button -->
+                    <div class="text-start">
+                        <button class="btn btn-outline-secondary" type="button" data-bs-toggle="offcanvas"
+                            data-bs-target="#offcanvasMenu">
+                            <iconify-icon icon="mingcute:menu-fill"></iconify-icon>
+                        </button>
+                    </div>
+
+                    <!-- Center-aligned logo -->
+                    <div class="text-center">
+                        <img src="./images/logo.svg" alt="Logo" class="me-2">
+                    </div>
+
+                    <!-- Right-aligned login button -->
+                    <div class="text-end">
+                        <button class="btn" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasLogin"
+                            aria-controls="offcanvasLogin">
+                            <iconify-icon class="fs-1 rounded-circle bg-success mt-1 p-2 text-white fw-bold"
+                                icon="arcticons:contacts-alt"></iconify-icon>
+                        </button>
+                    </div>
                 </div>
+
+
+
             </div>
         </div>
     </header>
@@ -114,7 +136,7 @@
                     <div class="collapse navbar-collapse" id="navbarNav">
                         <ul class="navbar-nav mx-auto  py-2">
                             <li class="nav-item dropdown mx-3 ">
-                                <a class="nav-link dropdown-toggle px-5 border-end" href="#" id="homeDropdown"
+                                <a class="nav-link dropdown-toggle px-5 border-end" href="" id="homeDropdown"
                                     role="button" data-bs-toggle="dropdown" aria-expanded="false">Home</a>
                                 <ul class="dropdown-menu" aria-labelledby="homeDropdown">
                                     <li><a class="dropdown-item" href="#">Home Default</a></li>
@@ -162,83 +184,44 @@
     </header>
 
     <!-- hero section Large screen  -->
-    <div id="carouselExampleFade" class="carousel d-none d-sm-none d-md-block" data-bs-ride="carousel">
+    
+    <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
+                aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+        </div>
         <div class="carousel-inner">
             <!-- First Slide -->
             <div class="carousel-item active">
-                <img src="./images/hero-img1.jpg" class=" w-100" alt="Fresh Meat">
-                <div class="carousel-caption  text-end">
+                <img src="./images/hero-img1.jpg" class="d-block w-100" alt="Image 1">
+                <div class="carousel-caption d-none d-md-block text-end">
                     <h2 class="fw-bold">Farm Fresh Meat &</h2>
                     <p class="fs-1">Poultry <span class="fw-bold">100% Organic.</span></p>
                     <p class="fs-5">Always fresh organic products.</p>
                     <a href="#" class="btn btn-warning btn-lg">Shop Now</a>
                 </div>
             </div>
-
             <!-- Second Slide -->
             <div class="carousel-item">
-                <img src="./images/heroimg-2.jpg" class=" w-100" alt="Fresh Vegetables">
-                <div class="carousel-caption  text-end">
-                    <h2 class="fw-bold">Farm Fresh Vegetables &</h2>
-                    <p class="fw-bold fs-3">Food 100% Organic.</p>
-                    <p>Always fresh organic products for you.</p>
+                <img src="./images/heroimg-2.jpg" class="d-block w-100" alt="Image 2">
+                <div class="carousel-caption d-none d-md-block text-end">
+                    <h2 class="fw-bold">Farm Fresh Meat &</h2>
+                    <p class="fs-1">Poultry <span class="fw-bold">100% Organic.</span></p>
+                    <p class="fs-5">Always fresh organic products.</p>
                     <a href="#" class="btn btn-warning btn-lg">Shop Now</a>
                 </div>
             </div>
         </div>
-        <button class="carousel-control-prev p-3" type="button " data-bs-target="#carouselExampleFade"
-            data-bs-slide="prev">
-            <span class="carousel-control-prev-icon " aria-hidden="true"></span>
+        <!-- Carousel Controls -->
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
             <span class="visually-hidden">Previous</span>
         </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="next">
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
             <span class="carousel-control-next-icon" aria-hidden="true"></span>
             <span class="visually-hidden">Next</span>
         </button>
-
-    </div>
-    <!-- Hero section small screen  -->
-
-    <div class="d-sm-block d-md-none">
-        <div id="carouselExampleFade" class="carousel" data-bs-ride="carousel">
-            <div class="carousel-inner">
-                <!-- First Slide -->
-                <div class="carousel-item active">
-                    <img src="./images/hero-img1.jpg" class="w-100" alt="Fresh Meat">
-                    <div class="carousel-caption text-end"
-                        style="position: absolute; top: 0; right: 0; left: 0; bottom: 0; display: flex; flex-direction: column; justify-content: center; align-items: flex-end; padding: 20px; background: rgba(0, 0, 0, 0.4); color: white;">
-                        <h2 style="font-size: 1.5rem;">Farm Fresh Meat &</h2>
-                        <p style="font-size: 1rem;">Poultry <span>100% Organic.</span></p>
-                        <p style="font-size: 0.9rem;">Always fresh organic products.</p>
-                        <a href="#" class="btn btn-warning btn-lg">Shop Now</a>
-                    </div>
-                </div>
-
-                <!-- Second Slide -->
-                <div class="carousel-item">
-                    <img src="./images/heroimg-2.jpg" class="w-100" alt="Fresh Vegetables">
-                    <div class="carousel-caption text-end"
-                        style="position: absolute; top: 0; right: 0; left: 0; bottom: 0; display: flex; flex-direction: column; justify-content: center; align-items: flex-end; padding: 20px; background: rgba(0, 0, 0, 0.4); color: white;">
-                        <h2 style="font-size: 1.5rem;">Farm Fresh Vegetables &</h2>
-                        <p style="font-size: 1rem;">Food 100% Organic.</p>
-                        <p style="font-size: 0.9rem;">Always fresh organic products for you.</p>
-                        <a href="#" class="btn btn-warning btn-lg">Shop Now</a>
-                    </div>
-                </div>
-            </div>
-
-            <button class="carousel-control-prev p-3" type="button" data-bs-target="#carouselExampleFade"
-                data-bs-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Previous</span>
-            </button>
-
-            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade"
-                data-bs-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Next</span>
-            </button>
-        </div>
     </div>
 
     <div class="bg-light">
@@ -355,15 +338,16 @@
             <div class="col-lg-2 mb-4  d-none d-sm-none d-lg-block">
                 <div class=" text-center h-100 card-hover bg-0">
 
-                    <div class="image-container position-relative">
+                    <div class="image-container cursor-pointer position-relative">
                         <img src="./images/product-01-291x291.jpg" class="card-img-top main-image"
                             alt="Orange Peel Zest">
-                        <img src="./images/product-02-291x291.jpg" class="card-img-top second-image"
+                        <img src="./images/product-02-291x291.jpg" class="card-img-top second-image "
                             alt="Alternate Image">
-                        <div class="icon-overlay">
-                            <div class="icon-bg mt-5 d-flex justify-content-around align-items-center ">
+                        <div class=" icon-overlay my-1 mx-2 cursor-pointer ">
+                            <div
+                                class="bg-white border-top border-secondary mt-5 d-flex justify-content-around align-items-center ">
                                 <div>
-                                    <iconify-icon icon="mdi:heart-outline"></iconify-icon> Wishlist
+                                    <iconify-icon class="me-1" icon="mdi:heart-outline"></iconify-icon> Wishlist
                                 </div>
                                 <div>
                                     <iconify-icon icon="carbon:view"></iconify-icon> Quickview
@@ -399,14 +383,15 @@
             <!-- Second Card -->
             <div class="col-lg-2 mb-4  d-none d-sm-none d-lg-block">
                 <div class="text-center h-100 card-hover">
-                    <div class="image-container position-relative">
+                    <div class="image-container cursor-pointer position-relative">
                         <img src="./images/product-02-291x291.jpg" class="card-img-top main-image" alt="Lemon Zest">
                         <img src="./images/product-03-291x291.jpg" class="card-img-top second-image"
                             alt="Alternate Image">
-                        <div class="icon-overlay">
-                            <div class="icon-bg d-flex justify-content-around align-items-center py-2">
+                        <div class=" icon-overlay my-1 mx-2 cursor-pointer">
+                            <div
+                                class="bg-white border-top border-secondary d-flex justify-content-around align-items-center py-2">
                                 <div>
-                                    <iconify-icon icon="mdi:heart-outline"></iconify-icon> Wishlist
+                                    <iconify-icon class="me-1" icon="mdi:heart-outline"></iconify-icon> Wishlist
                                 </div>
                                 <div>
                                     <iconify-icon icon="carbon:view"></iconify-icon> Quickview
@@ -440,14 +425,15 @@
             <!-- Third Card -->
             <div class="col-lg-2 col-md-4  mb-4  d-none d-sm-none d-md-block">
                 <div class="text-center h-100 card-hover">
-                    <div class="image-container position-relative">
+                    <div class="image-container cursor-pointer position-relative">
                         <img src="./images/product-03-291x291.jpg" class="card-img-top main-image" alt="Lime Zest">
                         <img src="./images/product-02-291x291.jpg" class="card-img-top second-image"
                             alt="Alternate Image">
-                        <div class="icon-overlay">
-                            <div class="icon-bg d-flex justify-content-around align-items-center py-2">
+                        <div class=" icon-overlay my-1 mx-2 cursor-pointer">
+                            <div
+                                class="bg-white border-top border-secondary d-flex justify-content-around align-items-center py-2">
                                 <div>
-                                    <iconify-icon icon="mdi:heart-outline"></iconify-icon> Wishlist
+                                    <iconify-icon class="me-1" icon="mdi:heart-outline"></iconify-icon> Wishlist
                                 </div>
                                 <div>
                                     <iconify-icon icon="carbon:view"></iconify-icon> Quickview
@@ -461,7 +447,7 @@
                     </button>
 
                     <div class="card-body d-flex flex-column text-start">
-                        <h5 class="card-title mt-2">Tesco Green Seedless</h5>
+                        <h6 class="card-title mt-2">Tesco Green Seedless</h6>
                         <p class="card-text">Fusion Foods</p>
                         <p class="card-text">450g</p>
                         <span><iconify-icon class="fs-5" icon="openmoji:star"></iconify-icon><iconify-icon class="fs-5"
@@ -479,14 +465,15 @@
             <!-- Fourth Card -->
             <div class="col-lg-2 col-md-4 col-6 mb-4">
                 <div class=" text-center h-100 card-hover">
-                    <div class="image-container position-relative">
+                    <div class="image-container cursor-pointer position-relative">
                         <img src="./images/product-04-291x291.jpg" class="card-img-top main-image" alt="Ginger Spice">
                         <img src="./images/product-07-291x291.jpg" class="card-img-top second-image"
                             alt="Alternate Image">
-                        <div class="icon-overlay">
-                            <div class="icon-bg d-flex justify-content-around align-items-center py-2">
+                        <div class=" icon-overlay my-1 mx-2 cursor-pointer">
+                            <div
+                                class="bg-white border-top border-secondary d-flex justify-content-around align-items-center py-2">
                                 <div>
-                                    <iconify-icon icon="mdi:heart-outline"></iconify-icon> Wishlist
+                                    <iconify-icon class="me-1" icon="mdi:heart-outline"></iconify-icon> Wishlist
                                 </div>
                                 <div>
                                     <iconify-icon icon="carbon:view"></iconify-icon> Quickview
@@ -520,15 +507,16 @@
             <!-- Fifth Card -->
             <div class="col-lg-2 col-md-4 col-6 mb-4 ">
                 <div class=" text-center h-100 card-hover">
-                    <div class="image-container position-relative">
+                    <div class="image-container cursor-pointer position-relative">
                         <img src="./images/product-05-291x291.jpg" class="card-img-top main-image"
                             alt="Garlic Granules">
                         <img src="./images/product-04-291x291.jpg" class="card-img-top second-image"
                             alt="Alternate Image">
-                        <div class="icon-overlay">
-                            <div class="icon-bg d-flex justify-content-around align-items-center py-2">
+                        <div class=" icon-overlay my-1 mx-2 cursor-pointer">
+                            <div
+                                class="bg-white border-top border-secondary d-flex justify-content-around align-items-center py-2">
                                 <div>
-                                    <iconify-icon icon="mdi:heart-outline"></iconify-icon> Wishlist
+                                    <iconify-icon class="me-1" icon="mdi:heart-outline"></iconify-icon> Wishlist
                                 </div>
                                 <div>
                                     <iconify-icon icon="carbon:view"></iconify-icon> Quickview
@@ -582,7 +570,7 @@
         </div>
     </div>
 
-    <div class="bg-img mt-5">
+    <div class="bg-img  mt-5">
         <div class=" container pt-5 d-flex justify-content-between">
             <h3 class="text-black fw-bold">Featured Fresh Fruits</h3>
             <p class="text-success">Shop all</p>
@@ -594,15 +582,16 @@
                 <div class="col-lg-2 mb-4  d-none d-sm-none d-lg-block">
                     <div class=" text-center h-100 card-hover bg-0">
 
-                        <div class="image-container position-relative">
+                        <div class="image-container cursor-pointer position-relative">
                             <img src="./images/product-01-291x291.jpg" class="card-img-top main-image"
                                 alt="Orange Peel Zest">
                             <img src="./images/product-02-291x291.jpg" class="card-img-top second-image"
                                 alt="Alternate Image">
-                            <div class="icon-overlay">
-                                <div class="icon-bg mt-5 d-flex justify-content-around align-items-center ">
+                            <div class=" icon-overlay my-1 mx-2 cursor-pointer">
+                                <div
+                                    class="bg-white border-top border-secondary mt-5 d-flex justify-content-around align-items-center ">
                                     <div>
-                                        <iconify-icon icon="mdi:heart-outline"></iconify-icon> Wishlist
+                                        <iconify-icon class="me-1" icon="mdi:heart-outline"></iconify-icon> Wishlist
                                     </div>
                                     <div>
                                         <iconify-icon icon="carbon:view"></iconify-icon> Quickview
@@ -639,14 +628,15 @@
                 <!-- Second Card -->
                 <div class="col-lg-2 mb-4  d-none d-sm-none d-lg-block">
                     <div class="text-center h-100 card-hover">
-                        <div class="image-container position-relative">
+                        <div class="image-container cursor-pointer position-relative">
                             <img src="./images/product-02-291x291.jpg" class="card-img-top main-image" alt="Lemon Zest">
                             <img src="./images/product-03-291x291.jpg" class="card-img-top second-image"
                                 alt="Alternate Image">
-                            <div class="icon-overlay">
-                                <div class="icon-bg d-flex justify-content-around align-items-center py-2">
+                            <div class=" icon-overlay my-1 mx-2 cursor-pointer">
+                                <div
+                                    class="bg-white border-top border-secondary d-flex justify-content-around align-items-center py-2">
                                     <div>
-                                        <iconify-icon icon="mdi:heart-outline"></iconify-icon> Wishlist
+                                        <iconify-icon class="me-1" icon="mdi:heart-outline"></iconify-icon> Wishlist
                                     </div>
                                     <div>
                                         <iconify-icon icon="carbon:view"></iconify-icon> Quickview
@@ -681,14 +671,15 @@
                 <!-- Third Card -->
                 <div class="col-lg-2 col-md-4  mb-4  d-none d-sm-none d-md-block">
                     <div class="text-center h-100 card-hover">
-                        <div class="image-container position-relative">
+                        <div class="image-container cursor-pointer position-relative">
                             <img src="./images/product-03-291x291.jpg" class="card-img-top main-image" alt="Lime Zest">
                             <img src="./images/product-02-291x291.jpg" class="card-img-top second-image"
                                 alt="Alternate Image">
-                            <div class="icon-overlay">
-                                <div class="icon-bg d-flex justify-content-around align-items-center py-2">
+                            <div class=" icon-overlay my-1 mx-2 cursor-pointer">
+                                <div
+                                    class="bg-white border-top border-secondary d-flex justify-content-around align-items-center py-2">
                                     <div>
-                                        <iconify-icon icon="mdi:heart-outline"></iconify-icon> Wishlist
+                                        <iconify-icon class="me-1" icon="mdi:heart-outline"></iconify-icon> Wishlist
                                     </div>
                                     <div>
                                         <iconify-icon icon="carbon:view"></iconify-icon> Quickview
@@ -702,7 +693,7 @@
                         </button>
 
                         <div class="card-body d-flex flex-column text-start">
-                            <h5 class="card-title mt-2">Tesco Green Seedless</h5>
+                            <h6 class="card-title mt-2">Tesco Green Seedless</h6>
                             <p class="card-text">Fusion Foods</p>
                             <p class="card-text">450g</p>
                             <span><iconify-icon class="fs-5" icon="openmoji:star"></iconify-icon><iconify-icon
@@ -721,15 +712,16 @@
                 <!-- Fourth Card -->
                 <div class="col-lg-2 col-md-4 col-6 mb-4">
                     <div class=" text-center h-100 card-hover">
-                        <div class="image-container position-relative">
+                        <div class="image-container cursor-pointer position-relative">
                             <img src="./images/product-04-291x291.jpg" class="card-img-top main-image"
                                 alt="Ginger Spice">
                             <img src="./images/product-07-291x291.jpg" class="card-img-top second-image"
                                 alt="Alternate Image">
-                            <div class="icon-overlay">
-                                <div class="icon-bg d-flex justify-content-around align-items-center py-2">
+                            <div class=" icon-overlay my-1 mx-2 cursor-pointer">
+                                <div
+                                    class="bg-white border-top border-secondary d-flex justify-content-around align-items-center py-2">
                                     <div>
-                                        <iconify-icon icon="mdi:heart-outline"></iconify-icon> Wishlist
+                                        <iconify-icon class="me-1" icon="mdi:heart-outline"></iconify-icon> Wishlist
                                     </div>
                                     <div>
                                         <iconify-icon icon="carbon:view"></iconify-icon> Quickview
@@ -769,10 +761,11 @@
                                 alt="Garlic Granules">
                             <img src="./images/product-04-291x291.jpg" class="card-img-top second-image"
                                 alt="Alternate Image">
-                            <div class="icon-overlay">
-                                <div class="icon-bg d-flex justify-content-around align-items-center py-2">
+                            <div class=" icon-overlay my-1 mx-2 cursor-pointer">
+                                <div
+                                    class="bg-white border-top border-secondary d-flex justify-content-around align-items-center py-2">
                                     <div>
-                                        <iconify-icon icon="mdi:heart-outline"></iconify-icon> Wishlist
+                                        <iconify-icon class="me-1" icon="mdi:heart-outline"></iconify-icon> Wishlist
                                     </div>
                                     <div>
                                         <iconify-icon icon="carbon:view"></iconify-icon> Quickview
@@ -896,11 +889,12 @@
                     <h3 class="text-black fw-bold">Recommended For You</h3>
                     <p class="text-success">Shop all</p>
                 </div>
-                <div class="col-lg-4 mb-4 col-sm-12 text-center d-lg-block">
+                <!-- fist card image -->
+                <div class="col-lg-4 d-sm-block d-md-none  mb-4 col-sm-12 text-center d-lg-block">
                     <img src="./images/banner-product.jpg" alt="">
                 </div>
                 <!-- Second Card -->
-                <div class="col-lg-2 mb-4 col-6 d-lg-block">
+                <div class="col-lg-2 d-sm-block d-md-none  mb-4 col-6 d-lg-block">
                     <div class=" text-center h-100 card-hover bg-0">
 
                         <div class="image-container position-relative">
@@ -908,10 +902,11 @@
                                 alt="Orange Peel Zest">
                             <img src="./images/product-02-291x291.jpg" class="card-img-top second-image"
                                 alt="Alternate Image">
-                            <div class="icon-overlay">
-                                <div class="icon-bg mt-5 d-flex justify-content-around align-items-center ">
+                            <div class=" icon-overlay my-1 mx-2 cursor-pointer">
+                                <div
+                                    class="bg-white border-top border-secondary mt-5 d-flex justify-content-around align-items-center ">
                                     <div>
-                                        <iconify-icon icon="mdi:heart-outline"></iconify-icon> Wishlist
+                                        <iconify-icon class="me-1" icon="mdi:heart-outline"></iconify-icon> Wishlist
                                     </div>
                                     <div>
                                         <iconify-icon icon="carbon:view"></iconify-icon> Quickview
@@ -946,16 +941,17 @@
                 </div>
 
                 <!-- Third Card -->
-                <div class="col-lg-2 col-md-4  mb-4 col-6 d-md-block">
+                <div class="col-lg-2 col-md-4  mb-4 col-6 d-md-block d-lg-block">
                     <div class="text-center h-100 card-hover">
                         <div class="image-container position-relative">
                             <img src="./images/product-02-291x291.jpg" class="card-img-top main-image" alt="Lemon Zest">
                             <img src="./images/product-03-291x291.jpg" class="card-img-top second-image"
                                 alt="Alternate Image">
-                            <div class="icon-overlay">
-                                <div class="icon-bg d-flex justify-content-around align-items-center py-2">
+                            <div class=" icon-overlay my-1 mx-2">
+                                <div
+                                    class="bg-white border-top border-secondary d-flex justify-content-around align-items-center py-2">
                                     <div>
-                                        <iconify-icon icon="mdi:heart-outline"></iconify-icon> Wishlist
+                                        <iconify-icon class="me-1" icon="mdi:heart-outline"></iconify-icon> Wishlist
                                     </div>
                                     <div>
                                         <iconify-icon icon="carbon:view"></iconify-icon> Quickview
@@ -988,16 +984,17 @@
                 </div>
 
                 <!-- Fourth Card -->
-                <div class="col-lg-2 col-md-4 col-6 mb-4">
+                <div class="col-lg-2 col-md-4 col-6 mb-4 d-lg-block">
                     <div class="text-center h-100 card-hover">
                         <div class="image-container position-relative">
                             <img src="./images/product-03-291x291.jpg" class="card-img-top main-image" alt="Lime Zest">
                             <img src="./images/product-02-291x291.jpg" class="card-img-top second-image"
                                 alt="Alternate Image">
-                            <div class="icon-overlay">
-                                <div class="icon-bg d-flex justify-content-around align-items-center py-2">
+                            <div class=" icon-overlay my-1 mx-2">
+                                <div
+                                    class="bg-white border-top border-secondary d-flex justify-content-around align-items-center py-2">
                                     <div>
-                                        <iconify-icon icon="mdi:heart-outline"></iconify-icon> Wishlist
+                                        <iconify-icon class="me-1" icon="mdi:heart-outline"></iconify-icon> Wishlist
                                     </div>
                                     <div>
                                         <iconify-icon icon="carbon:view"></iconify-icon> Quickview
@@ -1032,17 +1029,18 @@
                 </div>
 
                 <!-- fifth card -->
-                <div class="col-lg-2 col-md-4 col-6 mb-4">
+                <div class="col-lg-2 col-md-4 col-6 mb-4 d-lg-block">
                     <div class=" text-center h-100 card-hover">
                         <div class="image-container position-relative">
                             <img src="./images/product-04-291x291.jpg" class="card-img-top main-image"
                                 alt="Ginger Spice">
                             <img src="./images/product-07-291x291.jpg" class="card-img-top second-image"
                                 alt="Alternate Image">
-                            <div class="icon-overlay">
-                                <div class="icon-bg d-flex justify-content-around align-items-center py-2">
+                            <div class=" icon-overlay my-1 mx-2">
+                                <div
+                                    class="bg-white border-top border-secondary d-flex justify-content-around align-items-center py-2">
                                     <div>
-                                        <iconify-icon icon="mdi:heart-outline"></iconify-icon> Wishlist
+                                        <iconify-icon class="me-1" icon="mdi:heart-outline"></iconify-icon> Wishlist
                                     </div>
                                     <div>
                                         <iconify-icon icon="carbon:view"></iconify-icon> Quickview
@@ -1077,6 +1075,8 @@
 
 
             </div>
+
+
         </div>
         <div class="container">
             <div class="row">
@@ -1088,10 +1088,11 @@
                                 alt="Garlic Granules">
                             <img src="./images/product-04-291x291.jpg" class="card-img-top second-image"
                                 alt="Alternate Image">
-                            <div class="icon-overlay">
-                                <div class="icon-bg d-flex justify-content-around align-items-center py-2">
+                            <div class=" icon-overlay my-1 mx-2">
+                                <div
+                                    class="bg-white border-top border-secondary d-flex justify-content-around align-items-center py-2">
                                     <div>
-                                        <iconify-icon icon="mdi:heart-outline"></iconify-icon> Wishlist
+                                        <iconify-icon class="me-1" icon="mdi:heart-outline"></iconify-icon> Wishlist
                                     </div>
                                     <div>
                                         <iconify-icon icon="carbon:view"></iconify-icon> Quickview
@@ -1123,7 +1124,7 @@
                     </div>
                 </div>
                 <!-- Second Card -->
-                <div class="col-lg-2 mb-4  d-none d-sm-none d-lg-block mx-3">
+                <div class="col-lg-2 d-sm-block d-md-none col-6 mb-4 d-lg-block">
                     <div class=" text-center h-100 card-hover bg-0">
 
                         <div class="image-container position-relative">
@@ -1131,10 +1132,11 @@
                                 alt="Orange Peel Zest">
                             <img src="./images/product-07-291x291.jpg" class="card-img-top second-image"
                                 alt="Alternate Image">
-                            <div class="icon-overlay">
-                                <div class="icon-bg mt-5 d-flex justify-content-around align-items-center ">
+                            <div class=" icon-overlay my-1 mx-2">
+                                <div
+                                    class="bg-white border-top border-secondary mt-5 d-flex justify-content-around align-items-center ">
                                     <div>
-                                        <iconify-icon icon="mdi:heart-outline"></iconify-icon> Wishlist
+                                        <iconify-icon class="me-1" icon="mdi:heart-outline"></iconify-icon> Wishlist
                                     </div>
                                     <div>
                                         <iconify-icon icon="carbon:view"></iconify-icon> Quickview
@@ -1169,16 +1171,17 @@
                 </div>
 
                 <!-- Third Card -->
-                <div class="col-lg-2 col-md-4  mb-4  d-none d-sm-none d-md-block mx-3">
+                <div class="col-lg-2 col-md-4  mb-4 col-6 d-lg-block">
                     <div class="text-center h-100 card-hover">
                         <div class="image-container position-relative">
                             <img src="./images/product-07-291x291.jpg" class="card-img-top main-image" alt="Lemon Zest">
                             <img src="./images/product-04-291x291.jpg" class="card-img-top second-image"
                                 alt="Alternate Image">
-                            <div class="icon-overlay">
-                                <div class="icon-bg d-flex justify-content-around align-items-center py-2">
+                            <div class=" icon-overlay my-1 mx-2">
+                                <div
+                                    class="bg-white border-top border-secondary d-flex justify-content-around align-items-center py-2">
                                     <div>
-                                        <iconify-icon icon="mdi:heart-outline"></iconify-icon> Wishlist
+                                        <iconify-icon class="me-1" icon="mdi:heart-outline"></iconify-icon> Wishlist
                                     </div>
                                     <div>
                                         <iconify-icon icon="carbon:view"></iconify-icon> Quickview
@@ -1211,16 +1214,17 @@
                 </div>
 
                 <!-- Fourth Card -->
-                <div class="col-lg-2 col-md-4 col-6 mb-4 mx-2">
+                <div class="col-lg-2 col-md-4 col-6 mb-4 d-lg-block">
                     <div class="text-center h-100 card-hover">
                         <div class="image-container position-relative">
                             <img src="./images/product-08-291x291.jpg" class="card-img-top main-image" alt="Lime Zest">
                             <img src="./images/product-07-291x291.jpg" class="card-img-top second-image"
                                 alt="Alternate Image">
-                            <div class="icon-overlay">
-                                <div class="icon-bg d-flex justify-content-around align-items-center py-2">
+                            <div class=" icon-overlay my-1 mx-2">
+                                <div
+                                    class="bg-white border-top border-secondary d-flex justify-content-around align-items-center py-2">
                                     <div>
-                                        <iconify-icon icon="mdi:heart-outline"></iconify-icon> Wishlist
+                                        <iconify-icon class="me-1" icon="mdi:heart-outline"></iconify-icon> Wishlist
                                     </div>
                                     <div>
                                         <iconify-icon icon="carbon:view"></iconify-icon> Quickview
@@ -1234,7 +1238,7 @@
                         </button>
 
                         <div class="card-body d-flex flex-column text-start">
-                            <h5 class="card-title mt-2">Tesco Green Seedless</h5>
+                            <h6 class="card-title mt-2">Tesco Green Seedless</h6>
                             <p class="card-text">Fusion Foods</p>
                             <p class="card-text">450g</p>
                             <span><iconify-icon class="fs-5" icon="openmoji:star"></iconify-icon><iconify-icon
@@ -1251,17 +1255,18 @@
                 </div>
 
                 <!-- fifth card -->
-                <div class="col-lg-2 col-md-4 col-6 mb-4 mx-2">
+                <div class="col-lg-2 col-md-4 col-6 mb-4 d-lg-block">
                     <div class=" text-center h-100 card-hover">
                         <div class="image-container position-relative">
                             <img src="./images/product-09-291x291.jpg" class="card-img-top main-image"
                                 alt="Ginger Spice">
                             <img src="./images/product-10-291x291.jpg" class="card-img-top second-image"
                                 alt="Alternate Image">
-                            <div class="icon-overlay">
-                                <div class="icon-bg d-flex justify-content-around align-items-center py-2">
+                            <div class=" icon-overlay my-1 mx-2">
+                                <div
+                                    class="bg-white border-top border-secondary d-flex justify-content-around align-items-center py-2">
                                     <div>
-                                        <iconify-icon icon="mdi:heart-outline"></iconify-icon> Wishlist
+                                        <iconify-icon class="me-1" icon="mdi:heart-outline"></iconify-icon> Wishlist
                                     </div>
                                     <div>
                                         <iconify-icon icon="carbon:view"></iconify-icon> Quickview
@@ -1297,8 +1302,11 @@
             </div>
         </div>
     </div>
+
+
+
     <!-- Contact Section -->
-    <div class="bg-light">
+    <div class="bg-light py-5">
         <div class="container mt-3 py-5">
             <p class="text-secondary"><span class="fs-5 fw-bold">GreenMart</span> makes online grocery delivery and
                 grocery shopping fast and easy. Get groceries delivered and order the best of seasonal farm fresh food,
@@ -1358,25 +1366,23 @@
     </div>
 
     <!-- footer secton -->
-    <footer class="bg-white pt-4 text-dark">
+    <footer class="bg-white shadow py-5 text-dark">
         <div class="container py-4">
-            <div class="row align-items-center text-center text-md-start">
-                <div class="col-md-4 col-12 mb-2 text-start">
+            <div class="row align-items-center text-start text-md-start">
+                <!-- First section: Logo and contact details -->
+                <div class="col-lg-4 col-md-12 col-12 mb-4 text-start">
                     <img class="img-fluid" src="./images/logo.svg" alt="">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque id luctus mauris, eget varius
-                        libero. Vestibulum metus leo.</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque id luctus mauris, eget varius libero. Vestibulum metus leo.</p>
                     <p class="text-success fs-5">
-                        <iconify-icon class="me-2 fs-5 text-black"
-                            icon="ic:outline-email"></iconify-icon>contact@example.com
+                        <iconify-icon class="me-2 fs-5 text-black" icon="ic:outline-email"></iconify-icon>contact@example.com
                     </p>
                     <p>
                         <iconify-icon class="me-2 fs-5 text-black" icon="line-md:phone"></iconify-icon>+884 123 456 789
                     </p>
                     <p>
-                        <iconify-icon class="me-2 fs-5 text-black" icon="material-symbols:house"></iconify-icon>70 West
-                        Buckingham Ave, NY 11735
+                        <iconify-icon class="me-2 fs-5 text-black" icon="material-symbols:house"></iconify-icon>70 West Buckingham Ave, NY 11735
                     </p>
-                    <div class="d-flex justify-content-start justify-content-md-start">
+                    <div class="d-flex justify-content-start">
                         <a href="#" class="me-3 bg-light text-black p-1 px-2 rounded-circle">
                             <iconify-icon class="fs-4 mt-1" icon="ri:facebook-fill"></iconify-icon>
                         </a>
@@ -1391,33 +1397,39 @@
                         </a>
                     </div>
                 </div>
-                <div class="col-md-2 col-6 mb-5 pb-3 pt-3 text-start">
+    
+                <!-- Second section: About -->
+                <div class="col-lg-2 col-md-6 col-12 mb-4 text-start">
                     <h5 class="fw-bold">ABOUT</h5>
                     <a href="#" class="text-dark text-decoration-none">About Us</a><br>
                     <a href="#" class="text-dark text-decoration-none">Contact Us</a><br>
                     <a href="#" class="text-dark text-decoration-none">Help Center</a>
                 </div>
-                <div class="col-md-2 col-6 mb-5 pb-3 pt-3 text-start">
+    
+                <!-- Third section: Help & Guide -->
+                <div class="col-lg-3 col-md-6 col-12 mb-4 text-start">
                     <h5 class="fw-bold">HELP & GUIDE</h5>
                     <a href="#" class="text-dark text-decoration-none">Term Of Use</a><br>
                     <a href="#" class="text-dark text-decoration-none">Privacy Policy</a><br>
                     <a href="#" class="text-dark text-decoration-none">Shipping & Delivery</a>
                 </div>
-                <div class="col-md-4 col-12 mb-3 text-start">
+    
+                <!-- Fourth section: Newsletter -->
+                <div class="col-lg-3 col-md-12 col-12 mb-4 text-start">
                     <h5 class="fw-bold">NEWSLETTER</h5>
                     <p>Don’t miss out on thousands of great deals & promotions.</p>
                     <div class="mb-3">
                         <div class="input-group">
-                            <input type="email" class="form-control" placeholder="Email address..."
-                                aria-label="Email address">
+                            <input type="email" class="form-control" placeholder="Email address..." aria-label="Email address">
                         </div>
                         <div class="d-flex justify-content-start mt-2">
-                            <button class="border-0 rounded-2 fw-bold py-2 fs-5 px-3 btn-successs text-white"
-                                type="button">Subscribe</button>
+                            <button class="border-0 rounded-2 fw-bold py-2 fs-5 px-3 btn-successs text-white" type="button">Subscribe</button>
                         </div>
                     </div>
                 </div>
             </div>
+    
+            <!-- Footer bottom section -->
             <div class="text-secondary py-5">
                 <div class="container">
                     <div class="row align-items-center">
@@ -1432,11 +1444,11 @@
             </div>
         </div>
     </footer>
+    
 
 
-
-      <!-- Offcanvas Menu for Mobile and Tablet -->
-      <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasMenu" aria-labelledby="offcanvasMenuLabel">
+    <!-- Offcanvas Menu for Mobile and Tablet -->
+    <div class="offcanvas offcanvas-start w-" tabindex="-1" id="offcanvasMenu" aria-labelledby="offcanvasMenuLabel">
         <div class="offcanvas-header">
             <h5 class="offcanvas-title" id="offcanvasMenuLabel">Menu</h5>
             <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
@@ -1452,4 +1464,28 @@
             </ul>
         </div>
     </div>
+
+
+    <div class="offcanvas offcanvas-end w-75" tabindex="-1" id="offcanvasLogin" aria-labelledby="offcanvasLoginLabel">
+        <div class="offcanvas-header">
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+            <div class="d-flex">
+                <iconify-icon class="fs-1 rounded-circle bg-success p-2 text-white fw-bold"
+                    icon="arcticons:contacts-alt"></iconify-icon>
+                <h2 class="ms-3 mt-1">LOGIN/REGISTER</h2>
+            </div>
+            <div class="d-grid gap-2">
+                <button type="button"
+                    class="btn btn-white shadow mt-3 btn-lg text-start text-decoration-none text-black"><a
+                        class="text-decoration-none text-black" href="./Pages/login.html">LOGIN</a></button>
+                <button type="button" class="btn btn-white shadow mt-2 btn-lg text-start">
+                    <a class="text-decoration-none text-black" href="./Pages/register.html">REGISTER</a>
+                </button>
+            </div>
+        </div>
+    </div>
 </body>
+
+</html>
