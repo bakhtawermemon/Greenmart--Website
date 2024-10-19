@@ -89,35 +89,59 @@
                                         href="./Pages/register.html" class="text-black">Register</a></span>
                             </div>
                         </div>
-
-                        <button class="btn btn-success d-flex align-items-center">
-                            <iconify-icon class="fs-2 me-3" icon="mdi:cart"></iconify-icon>Cart <br> $0.00
-                        </button>
+                        <div class="d-flex align-items-center bg-success text-white rounded-3 px-4 py-2 me-1">
+                            <div class="position-relative " type="button" data-bs-toggle="offcanvas"
+                                data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">
+                                <iconify-icon class="position-relative" icon="mdi:shopping-cart" width="20" height="20"
+                                    style="color: white"></iconify-icon>
+                                <span id="cartQuantityBadge"
+                                    class="position-absolute top-0 start-100 translate-middle badge border border-light rounded-circle bg-warning ">0</span>
+                            </div>
+                            <h6 id="totalPrice" class="mb-0 ms-4 ">Cart <br><span>$0.00</span></h6>
+                        </div>
                     </div>
                 </div>
-                <!-- Container to hold all elements in one row -->
-                <div class="d-lg-none d-flex justify-content-between align-items-center p-2">
-                    <!-- Left-aligned menu button -->
-                    <div class="text-start">
-                        <button class="btn btn-outline-secondary" type="button" data-bs-toggle="offcanvas"
-                            data-bs-target="#offcanvasMenu">
-                            <iconify-icon icon="mingcute:menu-fill"></iconify-icon>
-                        </button>
-                    </div>
 
-                    <!-- Center-aligned logo -->
-                    <div class="text-center">
-                        <img src="./images/logo.svg" alt="Logo" class="me-2">
+                <div class="container">
+                    <div class="row">
+                        <div class="d-lg-none col-6 d-flex justify-content-between align-items-center p-2">
+                            <div class="text-start">
+                                <button class="btn btn-outline-secondary" type="button" data-bs-toggle="offcanvas"
+                                    data-bs-target="#offcanvasMenu">
+                                    <iconify-icon icon="mingcute:menu-fill"></iconify-icon>
+                                </button>
+                            </div>
+                            <div>
+                                <img class="ms-1" src="./images/logo.svg" alt="Logo" class="me-2">
+                            </div>
+                        </div>
+                
+                        <div class="d-lg-none col-6 text-end d-flex justify-content-end align-items-center">
+                           
+                            <div class="position-relative " type="button" data-bs-toggle="offcanvas"
+                            data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">
+                            <iconify-icon class="position-relative text-black fs-1" icon="mdi:shopping-cart" ></iconify-icon>
+                            <span id="cartQuantityBadge"
+                                class="position-absolute top-0 start-100 translate-middle badge border border-light rounded-circle bg-warning ">0</span>
+                        </div>
+                       
+                            <div>
+                                <button class="btn" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasLogin"
+                                    aria-controls="offcanvasLogin">
+                                    <iconify-icon class="fs-1 rounded-circle bg-success mt-1 p-2 text-white fw-bold"
+                                        icon="arcticons:contacts-alt"></iconify-icon>
+                                </button>
+                            </div>
+                        </div>
                     </div>
+                </div>
+                
+                
+                
+                
 
-                    <!-- Right-aligned login button -->
-                    <div class="text-end">
-                        <button class="btn" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasLogin"
-                            aria-controls="offcanvasLogin">
-                            <iconify-icon class="fs-1 rounded-circle bg-success mt-1 p-2 text-white fw-bold"
-                                icon="arcticons:contacts-alt"></iconify-icon>
-                        </button>
-                    </div>
+                    
+                    
                 </div>
 
 
@@ -125,6 +149,10 @@
             </div>
         </div>
     </header>
+
+   
+
+
 
     <header>
         <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm d-flex justify-content-between">
@@ -184,45 +212,56 @@
     </header>
 
     <!-- hero section Large screen  -->
-    
-    <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+
+    <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="true">
         <div class="carousel-indicators">
-            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
-                aria-current="true" aria-label="Slide 1"></button>
-            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
+            aria-current="true" aria-label="Slide 1"></button>
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+            aria-label="Slide 2"></button>
+    
         </div>
         <div class="carousel-inner">
-            <!-- First Slide -->
-            <div class="carousel-item active">
-                <img src="./images/hero-img1.jpg" class="d-block w-100" alt="Image 1">
-                <div class="carousel-caption d-none d-md-block text-end">
-                    <h2 class="fw-bold">Farm Fresh Meat &</h2>
-                    <p class="fs-1">Poultry <span class="fw-bold">100% Organic.</span></p>
-                    <p class="fs-5">Always fresh organic products.</p>
-                    <a href="#" class="btn btn-warning btn-lg">Shop Now</a>
-                </div>
+          <div class="carousel-item active position-relative">
+            <!-- <img src="./images/hero2.jfif" class="d-block w-100 hero-img" alt="picture"> -->
+            <img src="./images/hero-img1.jpg" class="img-fluid w-100" style="object-fit: cover;" alt="Hero Image">
+    
+            <div class="container position-absolute top-50 start-50 translate-middle text-white text-end  my-md-4">
+              <h1 class="display-6 fw-bold ">Farm Fresh <span class="fw-normal">Vegetables & <br>Food</span>100% Organic
+              </h1>
+              <p class="fw-bold">Always Fresh organic products for you.</p>
+              <a href="#" class="btn btn-warning mb-md-5">Shop Now</a>
             </div>
-            <!-- Second Slide -->
-            <div class="carousel-item">
-                <img src="./images/heroimg-2.jpg" class="d-block w-100" alt="Image 2">
-                <div class="carousel-caption d-none d-md-block text-end">
-                    <h2 class="fw-bold">Farm Fresh Meat &</h2>
-                    <p class="fs-1">Poultry <span class="fw-bold">100% Organic.</span></p>
-                    <p class="fs-5">Always fresh organic products.</p>
-                    <a href="#" class="btn btn-warning btn-lg">Shop Now</a>
-                </div>
+    
+    
+          </div>
+    
+          <div class="carousel-item position-relative   ">
+            <!-- <img src="./images/hero.jfif" class="d-block w-100 hero-img" alt="picture"> -->
+            <img src="./images/heroimg-2.jpg" class="img-fluid w-100" style="object-fit: cover;" alt="Hero Image">
+            <div class="container position-absolute top-50 start-50 translate-middle text-white text-end">
+              <h1 class="display-6 fw-bold">Farm Fresh <span class="fw-normal">Meat & <br>Poultry</span>100% Organic</h1>
+              <p class="fw-bold">Always Fresh organic products for you.</p>
+              <a href="#" class="btn btn-warning mt-3">Shop Now</a>
             </div>
+          </div>
+    
+    
+    
+    
         </div>
-        <!-- Carousel Controls -->
-        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Previous</span>
+        <button class="carousel-control-prev " type="button" data-bs-target="#carouselExampleIndicators"
+          data-bs-slide="prev">
+          <span class="carousel-control-prev-icon " aria-hidden="true"></span>
+          <span class="visually-hidden ">Previous</span>
+    
         </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Next</span>
+        <button class="carousel-control-next " type="button" data-bs-target="#carouselExampleIndicators"
+          data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
         </button>
-    </div>
+      </div>
 
     <div class="bg-light">
         <div class="text-center py-3">
@@ -336,24 +375,13 @@
         <div class="row">
             <div class="col-lg-1 d-none d-sm-none d-lg-block"></div>
             <div class="col-lg-2 mb-4  d-none d-sm-none d-lg-block">
-                <div class=" text-center h-100 card-hover bg-0">
+                <div class=" text-center  card-hover bg-0">
 
                     <div class="image-container cursor-pointer position-relative">
                         <img src="./images/product-01-291x291.jpg" class="card-img-top main-image"
                             alt="Orange Peel Zest">
-                        <img src="./images/product-02-291x291.jpg" class="card-img-top second-image "
-                            alt="Alternate Image">
-                        <div class=" icon-overlay my-1 mx-2 cursor-pointer ">
-                            <div
-                                class="bg-white border-top border-secondary mt-5 d-flex justify-content-around align-items-center ">
-                                <div>
-                                    <iconify-icon class="me-1" icon="mdi:heart-outline"></iconify-icon> Wishlist
-                                </div>
-                                <div>
-                                    <iconify-icon icon="carbon:view"></iconify-icon> Quickview
-                                </div>
-                            </div>
-                        </div>
+                        <img src="./images/product-02-291x291.jpg" class="card-img-top second-image ">
+
                     </div>
                     <button
                         class="border bg-white rounded-3  text-black mt-4 d-flex justify-content-start align-items-center px-4">
@@ -364,7 +392,6 @@
                     <div class="card-body d-flex flex-column text-start">
 
                         <h6 class="card-title  mt-2">Zesco Ripe Bananas</h6>
-                        <p class="card-text">Betterfoods</p>
                         <p class="card-text">350g</p>
                         <div class="mb-2">
                             <span><iconify-icon class="fs-5" icon="openmoji:star"></iconify-icon><iconify-icon
@@ -374,72 +401,62 @@
                                     icon="mdi-light:star"></iconify-icon>3</span>
                         </div>
                         <p class="text-danger">$120.00</p>
-                        <button class=" btn-successs mt-auto text-white  fw-bold border-0 rounded-3 py-2"><iconify-icon
-                                class="fs-5 mt-1 me-3" icon="mynaui:cart-solid"></iconify-icon>Add to cart</button>
+                        <button class="btn btn-success text-white fw-bold px-4 add-to-cart-btn"
+                            data-name="Zesco Ripe Bananas" data-price="120.00"
+                            data-img="./images/product-01-291x291.jpg" data-made="Betterfoods">
+                            <iconify-icon icon="bxs:cart"></iconify-icon>
+                            <span class="fw-semibold">Add to cart</span>
+                        </button>
                     </div>
                 </div>
             </div>
 
             <!-- Second Card -->
             <div class="col-lg-2 mb-4  d-none d-sm-none d-lg-block">
-                <div class="text-center h-100 card-hover">
+                <div class="text-center  card-hover">
                     <div class="image-container cursor-pointer position-relative">
-                        <img src="./images/product-02-291x291.jpg" class="card-img-top main-image" alt="Lemon Zest">
-                        <img src="./images/product-03-291x291.jpg" class="card-img-top second-image"
+                        <img src="./images/product-05-291x291.jpg" class="card-img-top main-image"
+                            alt="Garlic Granules">
+                        <img src="./images/product-04-291x291.jpg" class="card-img-top second-image"
                             alt="Alternate Image">
-                        <div class=" icon-overlay my-1 mx-2 cursor-pointer">
-                            <div
-                                class="bg-white border-top border-secondary d-flex justify-content-around align-items-center py-2">
-                                <div>
-                                    <iconify-icon class="me-1" icon="mdi:heart-outline"></iconify-icon> Wishlist
-                                </div>
-                                <div>
-                                    <iconify-icon icon="carbon:view"></iconify-icon> Quickview
-                                </div>
-                            </div>
-                        </div>
+
                     </div>
                     <button
-                        class="border bg-white rounded-3  text-black mt-4 d-flex justify-content-start align-items-center px-4">
-                        Iceberg Foods
+                        class="border bg-white rounded-3 text-black mt-4 d-flex justify-content-start align-items-center px-4">
+                        Urban Foody
                     </button>
-
                     <div class="card-body d-flex flex-column text-start">
                         <h6 class="card-title mt-2">Orange Peel Zest</h6>
-                        <p class="card-text">Iceberg Foods</p>
-                        <p class="card-text">350g</p>
+                        <p class="card-text">450g</p>
                         <div class="mb-2">
-                            <span><iconify-icon class="fs-5" icon="openmoji:star"></iconify-icon><iconify-icon
-                                    class="fs-5" icon="openmoji:star"></iconify-icon><iconify-icon class="fs-5 "
-                                    icon="mdi-light:star"></iconify-icon><iconify-icon class="fs-5 "
-                                    icon="mdi-light:star"></iconify-icon><iconify-icon class="fs-5 me-1"
-                                    icon="mdi-light:star"></iconify-icon>0</span>
+                            <span>
+                                <iconify-icon class="fs-5" icon="openmoji:star"></iconify-icon>
+                                <iconify-icon class="fs-5" icon="openmoji:star"></iconify-icon>
+                                <iconify-icon class="fs-5" icon="mdi-light:star"></iconify-icon>
+                                <iconify-icon class="fs-5" icon="mdi-light:star"></iconify-icon>
+                                <iconify-icon class="fs-5 me-1" icon="mdi-light:star"></iconify-icon>0
+                            </span>
                         </div>
-                        <p class="text-danger">$45.00</p>
-                        <button class=" btn-successs mt-auto text-white  fw-bold border-0 rounded-3 py-2"><iconify-icon
-                                class="fs-5 mt-1 me-3" icon="mynaui:cart-solid"></iconify-icon>Add to cart</button>
+                        <p class="text-danger">$80.00</p>
+                        <button class="btn btn-success text-white fw-bold px-4 add-to-cart-btn"
+                            data-name="Orange Peel Zest" data-price="80.00" data-img="./images/product-05-291x291.jpg"
+                            data-made="Urban Foody">
+                            <iconify-icon icon="bxs:cart"></iconify-icon>
+                            <span class="fw-semibold">Add to cart</span>
+                        </button>
                     </div>
                 </div>
             </div>
 
+
             <!-- Third Card -->
             <div class="col-lg-2 col-md-4  mb-4  d-none d-sm-none d-md-block">
-                <div class="text-center h-100 card-hover">
+                <div class="text-center  card-hover">
                     <div class="image-container cursor-pointer position-relative">
                         <img src="./images/product-03-291x291.jpg" class="card-img-top main-image" alt="Lime Zest">
                         <img src="./images/product-02-291x291.jpg" class="card-img-top second-image"
                             alt="Alternate Image">
-                        <div class=" icon-overlay my-1 mx-2 cursor-pointer">
-                            <div
-                                class="bg-white border-top border-secondary d-flex justify-content-around align-items-center py-2">
-                                <div>
-                                    <iconify-icon class="me-1" icon="mdi:heart-outline"></iconify-icon> Wishlist
-                                </div>
-                                <div>
-                                    <iconify-icon icon="carbon:view"></iconify-icon> Quickview
-                                </div>
-                            </div>
-                        </div>
+
                     </div>
                     <button
                         class="border bg-white rounded-3  text-black mt-4 d-flex justify-content-start align-items-center px-4">
@@ -448,7 +465,6 @@
 
                     <div class="card-body d-flex flex-column text-start">
                         <h6 class="card-title mt-2">Tesco Green Seedless</h6>
-                        <p class="card-text">Fusion Foods</p>
                         <p class="card-text">450g</p>
                         <span><iconify-icon class="fs-5" icon="openmoji:star"></iconify-icon><iconify-icon class="fs-5"
                                 icon="openmoji:star"></iconify-icon><iconify-icon class="fs-5"
@@ -456,30 +472,24 @@
                                 icon="openmoji:star"></iconify-icon><iconify-icon class="fs-5 me-1"
                                 icon="openmoji:star"></iconify-icon>1</span>
                         <p class="text-danger mt-2">$40.00</p>
-                        <button class=" btn-successs mt-auto text-white  fw-bold border-0 rounded-3 py-2"><iconify-icon
-                                class="fs-5 mt-1 me-3" icon="mynaui:cart-solid"></iconify-icon>Read more</button>
+                        <button class="btn btn-success text-white fw-bold px-4 add-to-cart-btn"
+                            data-name="Tesco Green Seedless" data-price="40.00"
+                            data-img="./images/product-03-291x291.jpg" data-made="Betterfoods">
+                            <iconify-icon icon="bxs:cart"></iconify-icon>
+                            <span class="fw-semibold">Add to cart</span>
+                        </button>
                     </div>
                 </div>
             </div>
 
             <!-- Fourth Card -->
             <div class="col-lg-2 col-md-4 col-6 mb-4">
-                <div class=" text-center h-100 card-hover">
+                <div class=" text-center  card-hover">
                     <div class="image-container cursor-pointer position-relative">
                         <img src="./images/product-04-291x291.jpg" class="card-img-top main-image" alt="Ginger Spice">
                         <img src="./images/product-07-291x291.jpg" class="card-img-top second-image"
                             alt="Alternate Image">
-                        <div class=" icon-overlay my-1 mx-2 cursor-pointer">
-                            <div
-                                class="bg-white border-top border-secondary d-flex justify-content-around align-items-center py-2">
-                                <div>
-                                    <iconify-icon class="me-1" icon="mdi:heart-outline"></iconify-icon> Wishlist
-                                </div>
-                                <div>
-                                    <iconify-icon icon="carbon:view"></iconify-icon> Quickview
-                                </div>
-                            </div>
-                        </div>
+
                     </div>
                     <button
                         class="border bg-white rounded-3  text-black mt-4 d-flex justify-content-start align-items-center px-4">
@@ -488,7 +498,6 @@
 
                     <div class="card-body d-flex flex-column text-start">
                         <h6 class="card-title mt-2">Waterfi SwimActive</h6>
-                        <p class="card-text">Holy Roots</p>
                         <p class="card-text">350g</p>
                         <div class="mb-2">
                             <span><iconify-icon class="fs-5" icon="openmoji:star"></iconify-icon>
@@ -498,31 +507,25 @@
                                     icon="mdi-light:star"></iconify-icon>0</span>
                         </div>
                         <p class="text-danger">$100.00</p>
-                        <button class=" btn-successs mt-auto text-white  fw-bold border-0 rounded-3 py-2"><iconify-icon
-                                class="fs-5 mt-1 me-3" icon="mynaui:cart-solid"></iconify-icon>Add to cart</button>
+                        <button class="btn btn-success text-white fw-bold px-4 add-to-cart-btn"
+                            data-name="Waterfi SwimActive" data-price="100.00"
+                            data-img="./images/product-04-291x291.jpg" data-made="Betterfoods">
+                            <iconify-icon icon="bxs:cart"></iconify-icon>
+                            <span class="fw-semibold">Add to cart</span>
+                        </button>
                     </div>
                 </div>
             </div>
 
             <!-- Fifth Card -->
             <div class="col-lg-2 col-md-4 col-6 mb-4 ">
-                <div class=" text-center h-100 card-hover">
+                <div class=" text-center  card-hover">
                     <div class="image-container cursor-pointer position-relative">
                         <img src="./images/product-05-291x291.jpg" class="card-img-top main-image"
                             alt="Garlic Granules">
                         <img src="./images/product-04-291x291.jpg" class="card-img-top second-image"
                             alt="Alternate Image">
-                        <div class=" icon-overlay my-1 mx-2 cursor-pointer">
-                            <div
-                                class="bg-white border-top border-secondary d-flex justify-content-around align-items-center py-2">
-                                <div>
-                                    <iconify-icon class="me-1" icon="mdi:heart-outline"></iconify-icon> Wishlist
-                                </div>
-                                <div>
-                                    <iconify-icon icon="carbon:view"></iconify-icon> Quickview
-                                </div>
-                            </div>
-                        </div>
+
                     </div>
                     <button
                         class="border bg-white rounded-3  text-black mt-4 d-flex justify-content-start align-items-center px-4">
@@ -531,7 +534,6 @@
 
                     <div class="card-body d-flex flex-column text-start">
                         <h6 class="card-title mt-2">Tesco Coconut</h6>
-                        <p class="card-text">Iceberg Foods</p>
                         <p class="card-text">450g</p>
                         <div class="mb-2">
                             <span><iconify-icon class="fs-5" icon="openmoji:star"></iconify-icon><iconify-icon
@@ -541,8 +543,13 @@
                                     icon="mdi-light:star"></iconify-icon>0</span>
                         </div>
                         <p class="text-danger">$80.00</p>
-                        <button class=" btn-successs mt-auto text-white  fw-bold border-0 rounded-3 py-2"><iconify-icon
-                                class="fs-5 mt-1 me-3" icon="mynaui:cart-solid"></iconify-icon>Add to cart</button>
+
+                        <button class="btn btn-success text-white fw-bold px-4 add-to-cart-btn"
+                            data-name="Tesco Coconut" data-price="80.00" data-made="Betterfoods"
+                            data-img="./images/product-05-291x291.jpg">
+                            <iconify-icon icon="bxs:cart"></iconify-icon>
+                            <span class="fw-semibold">Add to cart</span>
+                        </button>
                     </div>
                 </div>
             </div>
@@ -550,6 +557,13 @@
         </div>
 
     </div>
+
+
+
+
+
+
+
 
     <div class="container ">
         <div class="row mt-5 align-items-center">
@@ -580,24 +594,14 @@
             <div class="row">
                 <div class="col-lg-1 d-none d-sm-none d-lg-block"></div>
                 <div class="col-lg-2 mb-4  d-none d-sm-none d-lg-block">
-                    <div class=" text-center h-100 card-hover bg-0">
+                    <div class=" text-center  card-hover bg-0">
 
                         <div class="image-container cursor-pointer position-relative">
                             <img src="./images/product-01-291x291.jpg" class="card-img-top main-image"
                                 alt="Orange Peel Zest">
-                            <img src="./images/product-02-291x291.jpg" class="card-img-top second-image"
+                            <img src="./images/product-02-291x291.jpg" class="card-img-top second-image "
                                 alt="Alternate Image">
-                            <div class=" icon-overlay my-1 mx-2 cursor-pointer">
-                                <div
-                                    class="bg-white border-top border-secondary mt-5 d-flex justify-content-around align-items-center ">
-                                    <div>
-                                        <iconify-icon class="me-1" icon="mdi:heart-outline"></iconify-icon> Wishlist
-                                    </div>
-                                    <div>
-                                        <iconify-icon icon="carbon:view"></iconify-icon> Quickview
-                                    </div>
-                                </div>
-                            </div>
+
                         </div>
                         <button
                             class="border bg-white rounded-3  text-black mt-4 d-flex justify-content-start align-items-center px-4">
@@ -608,7 +612,6 @@
                         <div class="card-body d-flex flex-column text-start">
 
                             <h6 class="card-title  mt-2">Zesco Ripe Bananas</h6>
-                            <p class="card-text">Betterfoods</p>
                             <p class="card-text">350g</p>
                             <div class="mb-2">
                                 <span><iconify-icon class="fs-5" icon="openmoji:star"></iconify-icon><iconify-icon
@@ -618,74 +621,62 @@
                                         icon="mdi-light:star"></iconify-icon>3</span>
                             </div>
                             <p class="text-danger">$120.00</p>
-                            <button
-                                class=" btn-successs mt-auto text-white  fw-bold border-0 rounded-3 py-2"><iconify-icon
-                                    class="fs-5 mt-1 me-3" icon="mynaui:cart-solid"></iconify-icon>Add to cart</button>
+                            <button class="btn btn-success text-white fw-bold px-4 add-to-cart-btn"
+                                data-name="Zesco Ripe Bananas" data-price="120.00"
+                                data-img="./images/product-01-291x291.jpg" data-made="Betterfoods">
+                                <iconify-icon icon="bxs:cart"></iconify-icon>
+                                <span class="fw-semibold">Add to cart</span>
+                            </button>
                         </div>
                     </div>
                 </div>
 
                 <!-- Second Card -->
                 <div class="col-lg-2 mb-4  d-none d-sm-none d-lg-block">
-                    <div class="text-center h-100 card-hover">
+                    <div class="text-center  card-hover">
                         <div class="image-container cursor-pointer position-relative">
-                            <img src="./images/product-02-291x291.jpg" class="card-img-top main-image" alt="Lemon Zest">
-                            <img src="./images/product-03-291x291.jpg" class="card-img-top second-image"
+                            <img src="./images/product-05-291x291.jpg" class="card-img-top main-image"
+                                alt="Garlic Granules">
+                            <img src="./images/product-04-291x291.jpg" class="card-img-top second-image"
                                 alt="Alternate Image">
-                            <div class=" icon-overlay my-1 mx-2 cursor-pointer">
-                                <div
-                                    class="bg-white border-top border-secondary d-flex justify-content-around align-items-center py-2">
-                                    <div>
-                                        <iconify-icon class="me-1" icon="mdi:heart-outline"></iconify-icon> Wishlist
-                                    </div>
-                                    <div>
-                                        <iconify-icon icon="carbon:view"></iconify-icon> Quickview
-                                    </div>
-                                </div>
-                            </div>
+
                         </div>
                         <button
-                            class="border bg-white rounded-3  text-black mt-4 d-flex justify-content-start align-items-center px-4">
-                            Iceberg Foods
+                            class="border bg-white rounded-3 text-black mt-4 d-flex justify-content-start align-items-center px-4">
+                            Urban Foody
                         </button>
-
                         <div class="card-body d-flex flex-column text-start">
                             <h6 class="card-title mt-2">Orange Peel Zest</h6>
-                            <p class="card-text">Iceberg Foods</p>
-                            <p class="card-text">350g</p>
+                            <p class="card-text">450g</p>
                             <div class="mb-2">
-                                <span><iconify-icon class="fs-5" icon="openmoji:star"></iconify-icon><iconify-icon
-                                        class="fs-5" icon="openmoji:star"></iconify-icon><iconify-icon class="fs-5 "
-                                        icon="mdi-light:star"></iconify-icon><iconify-icon class="fs-5 "
-                                        icon="mdi-light:star"></iconify-icon><iconify-icon class="fs-5 me-1"
-                                        icon="mdi-light:star"></iconify-icon>0</span>
+                                <span>
+                                    <iconify-icon class="fs-5" icon="openmoji:star"></iconify-icon>
+                                    <iconify-icon class="fs-5" icon="openmoji:star"></iconify-icon>
+                                    <iconify-icon class="fs-5" icon="mdi-light:star"></iconify-icon>
+                                    <iconify-icon class="fs-5" icon="mdi-light:star"></iconify-icon>
+                                    <iconify-icon class="fs-5 me-1" icon="mdi-light:star"></iconify-icon>0
+                                </span>
                             </div>
-                            <p class="text-danger">$45.00</p>
-                            <button
-                                class=" btn-successs mt-auto text-white  fw-bold border-0 rounded-3 py-2"><iconify-icon
-                                    class="fs-5 mt-1 me-3" icon="mynaui:cart-solid"></iconify-icon>Add to cart</button>
+                            <p class="text-danger">$80.00</p>
+                            <button class="btn btn-success text-white fw-bold px-4 add-to-cart-btn"
+                                data-name="Orange Peel Zest" data-price="80.00"
+                                data-img="./images/product-05-291x291.jpg" data-made="Urban Foody">
+                                <iconify-icon icon="bxs:cart"></iconify-icon>
+                                <span class="fw-semibold">Add to cart</span>
+                            </button>
                         </div>
                     </div>
                 </div>
 
+
                 <!-- Third Card -->
                 <div class="col-lg-2 col-md-4  mb-4  d-none d-sm-none d-md-block">
-                    <div class="text-center h-100 card-hover">
+                    <div class="text-center  card-hover">
                         <div class="image-container cursor-pointer position-relative">
                             <img src="./images/product-03-291x291.jpg" class="card-img-top main-image" alt="Lime Zest">
                             <img src="./images/product-02-291x291.jpg" class="card-img-top second-image"
                                 alt="Alternate Image">
-                            <div class=" icon-overlay my-1 mx-2 cursor-pointer">
-                                <div
-                                    class="bg-white border-top border-secondary d-flex justify-content-around align-items-center py-2">
-                                    <div>
-                                        <iconify-icon class="me-1" icon="mdi:heart-outline"></iconify-icon> Wishlist
-                                    </div>
-                                    <div>
-                                        <iconify-icon icon="carbon:view"></iconify-icon> Quickview
-                                    </div>
-                                </div>
-                            </div>
+
                         </div>
                         <button
                             class="border bg-white rounded-3  text-black mt-4 d-flex justify-content-start align-items-center px-4">
@@ -694,7 +685,6 @@
 
                         <div class="card-body d-flex flex-column text-start">
                             <h6 class="card-title mt-2">Tesco Green Seedless</h6>
-                            <p class="card-text">Fusion Foods</p>
                             <p class="card-text">450g</p>
                             <span><iconify-icon class="fs-5" icon="openmoji:star"></iconify-icon><iconify-icon
                                     class="fs-5" icon="openmoji:star"></iconify-icon><iconify-icon class="fs-5"
@@ -702,32 +692,25 @@
                                     icon="openmoji:star"></iconify-icon><iconify-icon class="fs-5 me-1"
                                     icon="openmoji:star"></iconify-icon>1</span>
                             <p class="text-danger mt-2">$40.00</p>
-                            <button
-                                class=" btn-successs mt-auto text-white  fw-bold border-0 rounded-3 py-2"><iconify-icon
-                                    class="fs-5 mt-1 me-3" icon="mynaui:cart-solid"></iconify-icon>Read more</button>
+                            <button class="btn btn-success text-white fw-bold px-4 add-to-cart-btn"
+                                data-name="Tesco Green Seedless" data-price="40.00"
+                                data-img="./images/product-03-291x291.jpg" data-made="Betterfoods">
+                                <iconify-icon icon="bxs:cart"></iconify-icon>
+                                <span class="fw-semibold">Add to cart</span>
+                            </button>
                         </div>
                     </div>
                 </div>
 
                 <!-- Fourth Card -->
                 <div class="col-lg-2 col-md-4 col-6 mb-4">
-                    <div class=" text-center h-100 card-hover">
+                    <div class=" text-center  card-hover">
                         <div class="image-container cursor-pointer position-relative">
                             <img src="./images/product-04-291x291.jpg" class="card-img-top main-image"
                                 alt="Ginger Spice">
                             <img src="./images/product-07-291x291.jpg" class="card-img-top second-image"
                                 alt="Alternate Image">
-                            <div class=" icon-overlay my-1 mx-2 cursor-pointer">
-                                <div
-                                    class="bg-white border-top border-secondary d-flex justify-content-around align-items-center py-2">
-                                    <div>
-                                        <iconify-icon class="me-1" icon="mdi:heart-outline"></iconify-icon> Wishlist
-                                    </div>
-                                    <div>
-                                        <iconify-icon icon="carbon:view"></iconify-icon> Quickview
-                                    </div>
-                                </div>
-                            </div>
+
                         </div>
                         <button
                             class="border bg-white rounded-3  text-black mt-4 d-flex justify-content-start align-items-center px-4">
@@ -736,7 +719,6 @@
 
                         <div class="card-body d-flex flex-column text-start">
                             <h6 class="card-title mt-2">Waterfi SwimActive</h6>
-                            <p class="card-text">Holy Roots</p>
                             <p class="card-text">350g</p>
                             <div class="mb-2">
                                 <span><iconify-icon class="fs-5" icon="openmoji:star"></iconify-icon>
@@ -746,32 +728,25 @@
                                         icon="mdi-light:star"></iconify-icon>0</span>
                             </div>
                             <p class="text-danger">$100.00</p>
-                            <button
-                                class=" btn-successs mt-auto text-white  fw-bold border-0 rounded-3 py-2"><iconify-icon
-                                    class="fs-5 mt-1 me-3" icon="mynaui:cart-solid"></iconify-icon>Add to cart</button>
+                            <button class="btn btn-success text-white fw-bold px-4 add-to-cart-btn"
+                                data-name="Waterfi SwimActive" data-price="100.00"
+                                data-img="./images/product-04-291x291.jpg" data-made="Betterfoods">
+                                <iconify-icon icon="bxs:cart"></iconify-icon>
+                                <span class="fw-semibold">Add to cart</span>
+                            </button>
                         </div>
                     </div>
                 </div>
 
                 <!-- Fifth Card -->
-                <div class="col-lg-2 col-md-4 col-6 mb-4">
-                    <div class=" text-center h-100 card-hover">
-                        <div class="image-container position-relative">
+                <div class="col-lg-2 col-md-4 col-6 mb-4 ">
+                    <div class=" text-center  card-hover">
+                        <div class="image-container cursor-pointer position-relative">
                             <img src="./images/product-05-291x291.jpg" class="card-img-top main-image"
                                 alt="Garlic Granules">
                             <img src="./images/product-04-291x291.jpg" class="card-img-top second-image"
                                 alt="Alternate Image">
-                            <div class=" icon-overlay my-1 mx-2 cursor-pointer">
-                                <div
-                                    class="bg-white border-top border-secondary d-flex justify-content-around align-items-center py-2">
-                                    <div>
-                                        <iconify-icon class="me-1" icon="mdi:heart-outline"></iconify-icon> Wishlist
-                                    </div>
-                                    <div>
-                                        <iconify-icon icon="carbon:view"></iconify-icon> Quickview
-                                    </div>
-                                </div>
-                            </div>
+
                         </div>
                         <button
                             class="border bg-white rounded-3  text-black mt-4 d-flex justify-content-start align-items-center px-4">
@@ -780,7 +755,6 @@
 
                         <div class="card-body d-flex flex-column text-start">
                             <h6 class="card-title mt-2">Tesco Coconut</h6>
-                            <p class="card-text">Iceberg Foods</p>
                             <p class="card-text">450g</p>
                             <div class="mb-2">
                                 <span><iconify-icon class="fs-5" icon="openmoji:star"></iconify-icon><iconify-icon
@@ -790,14 +764,20 @@
                                         icon="mdi-light:star"></iconify-icon>0</span>
                             </div>
                             <p class="text-danger">$80.00</p>
-                            <button
-                                class=" btn-successs mt-auto text-white  fw-bold border-0 rounded-3 py-2"><iconify-icon
-                                    class="fs-5 mt-1 me-3" icon="mynaui:cart-solid"></iconify-icon>Add to cart</button>
+
+                            <button class="btn btn-success text-white fw-bold px-4 add-to-cart-btn"
+                                data-name="Tesco Coconut" data-price="80.00" data-made="Betterfoods"
+                                data-img="./images/product-05-291x291.jpg">
+                                <iconify-icon icon="bxs:cart"></iconify-icon>
+                                <span class="fw-semibold">Add to cart</span>
+                            </button>
                         </div>
                     </div>
                 </div>
                 <div class="col-1  d-none d-sm-none d-lg-block"></div>
             </div>
+
+
         </div>
 
         <div class="container  mt-3">
@@ -881,425 +861,344 @@
     </div>
 
     <!-- 10 cards -->
-    <div>
-        <div class="container">
-            <div class="row">
 
-                <div class="pt-5 pb-3 d-flex justify-content-between">
-                    <h3 class="text-black fw-bold">Recommended For You</h3>
-                    <p class="text-success">Shop all</p>
-                </div>
-                <!-- fist card image -->
-                <div class="col-lg-4 d-sm-block d-md-none  mb-4 col-sm-12 text-center d-lg-block">
-                    <img src="./images/banner-product.jpg" alt="">
-                </div>
-                <!-- Second Card -->
-                <div class="col-lg-2 d-sm-block d-md-none  mb-4 col-6 d-lg-block">
-                    <div class=" text-center h-100 card-hover bg-0">
+    <div class="container">
+        <div class="row">
 
-                        <div class="image-container position-relative">
-                            <img src="./images/product-01-291x291.jpg" class="card-img-top main-image"
-                                alt="Orange Peel Zest">
-                            <img src="./images/product-02-291x291.jpg" class="card-img-top second-image"
-                                alt="Alternate Image">
-                            <div class=" icon-overlay my-1 mx-2 cursor-pointer">
-                                <div
-                                    class="bg-white border-top border-secondary mt-5 d-flex justify-content-around align-items-center ">
-                                    <div>
-                                        <iconify-icon class="me-1" icon="mdi:heart-outline"></iconify-icon> Wishlist
-                                    </div>
-                                    <div>
-                                        <iconify-icon icon="carbon:view"></iconify-icon> Quickview
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <button
-                            class="border bg-white rounded-3  text-black mt-4 d-flex justify-content-start align-items-center px-4">
-                            Betterfoods
-                        </button>
-
-
-                        <div class="card-body d-flex flex-column text-start">
-
-                            <h6 class="card-title  mt-2">Zesco Ripe Bananas</h6>
-                            <p class="card-text">Betterfoods</p>
-                            <p class="card-text">350g</p>
-                            <div class="mb-2">
-                                <span><iconify-icon class="fs-5" icon="openmoji:star"></iconify-icon><iconify-icon
-                                        class="fs-5" icon="openmoji:star"></iconify-icon><iconify-icon class="fs-5"
-                                        icon="openmoji:star"></iconify-icon><iconify-icon class="fs-5"
-                                        icon="openmoji:star"></iconify-icon><iconify-icon class="fs-5 me-1"
-                                        icon="mdi-light:star"></iconify-icon>3</span>
-                            </div>
-                            <p class="text-danger">$120.00</p>
-                            <button
-                                class=" btn-successs mt-auto text-white  fw-bold border-0 rounded-3 py-2"><iconify-icon
-                                    class="fs-5 mt-1 me-3" icon="mynaui:cart-solid"></iconify-icon>Add to cart</button>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Third Card -->
-                <div class="col-lg-2 col-md-4  mb-4 col-6 d-md-block d-lg-block">
-                    <div class="text-center h-100 card-hover">
-                        <div class="image-container position-relative">
-                            <img src="./images/product-02-291x291.jpg" class="card-img-top main-image" alt="Lemon Zest">
-                            <img src="./images/product-03-291x291.jpg" class="card-img-top second-image"
-                                alt="Alternate Image">
-                            <div class=" icon-overlay my-1 mx-2">
-                                <div
-                                    class="bg-white border-top border-secondary d-flex justify-content-around align-items-center py-2">
-                                    <div>
-                                        <iconify-icon class="me-1" icon="mdi:heart-outline"></iconify-icon> Wishlist
-                                    </div>
-                                    <div>
-                                        <iconify-icon icon="carbon:view"></iconify-icon> Quickview
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <button
-                            class="border bg-white rounded-3  text-black mt-4 d-flex justify-content-start align-items-center px-4">
-                            Iceberg Foods
-                        </button>
-
-                        <div class="card-body d-flex flex-column text-start">
-                            <h6 class="card-title mt-2">Orange Peel Zest</h6>
-                            <p class="card-text">Iceberg Foods</p>
-                            <p class="card-text">350g</p>
-                            <div class="mb-2">
-                                <span><iconify-icon class="fs-5" icon="openmoji:star"></iconify-icon><iconify-icon
-                                        class="fs-5" icon="openmoji:star"></iconify-icon><iconify-icon class="fs-5 "
-                                        icon="mdi-light:star"></iconify-icon><iconify-icon class="fs-5 "
-                                        icon="mdi-light:star"></iconify-icon><iconify-icon class="fs-5 me-1"
-                                        icon="mdi-light:star"></iconify-icon>0</span>
-                            </div>
-                            <p class="text-danger">$45.00</p>
-                            <button
-                                class=" btn-successs mt-auto text-white  fw-bold border-0 rounded-3 py-2"><iconify-icon
-                                    class="fs-5 mt-1 me-3" icon="mynaui:cart-solid"></iconify-icon>Add to cart</button>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Fourth Card -->
-                <div class="col-lg-2 col-md-4 col-6 mb-4 d-lg-block">
-                    <div class="text-center h-100 card-hover">
-                        <div class="image-container position-relative">
-                            <img src="./images/product-03-291x291.jpg" class="card-img-top main-image" alt="Lime Zest">
-                            <img src="./images/product-02-291x291.jpg" class="card-img-top second-image"
-                                alt="Alternate Image">
-                            <div class=" icon-overlay my-1 mx-2">
-                                <div
-                                    class="bg-white border-top border-secondary d-flex justify-content-around align-items-center py-2">
-                                    <div>
-                                        <iconify-icon class="me-1" icon="mdi:heart-outline"></iconify-icon> Wishlist
-                                    </div>
-                                    <div>
-                                        <iconify-icon icon="carbon:view"></iconify-icon> Quickview
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <button
-                            class="border bg-white rounded-3  text-black mt-4 d-flex justify-content-start align-items-center px-4">
-                            fusion foods
-                        </button>
-
-                        <div class="card-body d-flex flex-column text-start">
-                            <h6 class="card-title mt-2">Tesco Green Seedless</h6>
-                            <p class="card-text">Fusion Foods</p>
-                            <p class="card-text">450g</p>
-                            <div class="mb-2">
-                                <span><iconify-icon class="fs-5" icon="openmoji:star"></iconify-icon><iconify-icon
-                                        class="fs-5" icon="openmoji:star"></iconify-icon><iconify-icon class="fs-5"
-                                        icon="openmoji:star"></iconify-icon><iconify-icon class="fs-5"
-                                        icon="openmoji:star"></iconify-icon><iconify-icon class="fs-5 me-1"
-                                        icon="openmoji:star"></iconify-icon>1</span>
-                            </div>
-                            <p class="text-danger">$40.00</p>
-                            <button
-                                class=" btn-successs mt-auto text-white  fw-bold border-0 rounded-3 py-2 mt-3"><iconify-icon
-                                    class="fs-5 mt-1 me-3" icon="mynaui:cart-solid"></iconify-icon>Read more</button>
-                        </div>
-
+            <div class="pt-5 pb-3 d-flex justify-content-between">
+                <h3 class="text-black fw-bold">Recommended For You</h3>
+                <p class="text-success">Shop all</p>
+            </div>
+            <!-- fist card image -->
+            <div class="col-lg-4 d-sm-block d-md-none  mb-4 col-sm-12 text-center d-lg-block">
+                <img src="./images/banner-product.jpg" alt="">
+            </div>
+            <div class="col-lg-2 d-sm-block d-md-none  mb-4 col-6 d-lg-block">
+                <div class="text-center  card-hover">
+                    <div class="image-container cursor-pointer position-relative">
+                        <img src="./images/product-05-291x291.jpg" class="card-img-top main-image"
+                            alt="Garlic Granules">
+                        <img src="./images/product-04-291x291.jpg" class="card-img-top second-image"
+                            alt="Alternate Image">
 
                     </div>
-                </div>
-
-                <!-- fifth card -->
-                <div class="col-lg-2 col-md-4 col-6 mb-4 d-lg-block">
-                    <div class=" text-center h-100 card-hover">
-                        <div class="image-container position-relative">
-                            <img src="./images/product-04-291x291.jpg" class="card-img-top main-image"
-                                alt="Ginger Spice">
-                            <img src="./images/product-07-291x291.jpg" class="card-img-top second-image"
-                                alt="Alternate Image">
-                            <div class=" icon-overlay my-1 mx-2">
-                                <div
-                                    class="bg-white border-top border-secondary d-flex justify-content-around align-items-center py-2">
-                                    <div>
-                                        <iconify-icon class="me-1" icon="mdi:heart-outline"></iconify-icon> Wishlist
-                                    </div>
-                                    <div>
-                                        <iconify-icon icon="carbon:view"></iconify-icon> Quickview
-                                    </div>
-                                </div>
-                            </div>
+                    <button
+                        class="border bg-white rounded-3 text-black mt-4 d-flex justify-content-start align-items-center px-4">
+                        Urban Foody
+                    </button>
+                    <div class="card-body d-flex flex-column text-start">
+                        <h6 class="card-title mt-2">Orange Peel Zest</h6>
+                        <p class="card-text">450g</p>
+                        <div class="mb-2">
+                            <span>
+                                <iconify-icon class="fs-5" icon="openmoji:star"></iconify-icon>
+                                <iconify-icon class="fs-5" icon="openmoji:star"></iconify-icon>
+                                <iconify-icon class="fs-5" icon="mdi-light:star"></iconify-icon>
+                                <iconify-icon class="fs-5" icon="mdi-light:star"></iconify-icon>
+                                <iconify-icon class="fs-5 me-1" icon="mdi-light:star"></iconify-icon>0
+                            </span>
                         </div>
-                        <button
-                            class="border bg-white rounded-3  text-black mt-4 d-flex justify-content-start align-items-center px-4">
-                            Holy Roots
+                        <p class="text-danger">$80.00</p>
+                        <button class="btn btn-success text-white fw-bold px-4 add-to-cart-btn"
+                            data-name="Orange Peel Zest" data-price="80.00" data-img="./images/product-05-291x291.jpg"
+                            data-made="Urban Foody">
+                            <iconify-icon icon="bxs:cart"></iconify-icon>
+                            <span class="fw-semibold">Add to cart</span>
                         </button>
-
-                        <div class="card-body d-flex flex-column text-start">
-                            <h6 class="card-title mt-2">Waterfi SwimActive</h6>
-                            <p class="card-text">Holy Roots</p>
-                            <p class="card-text">350g</p>
-                            <div class="mb-2">
-                                <span><iconify-icon class="fs-5" icon="openmoji:star"></iconify-icon>
-                                    <iconify-icon class="fs-5" icon="mdi-light:star"></iconify-icon><iconify-icon
-                                        class="fs-5" icon="mdi-light:star"></iconify-icon><iconify-icon class="fs-5"
-                                        icon="mdi-light:star"></iconify-icon><iconify-icon class="fs-5 me-1"
-                                        icon="mdi-light:star"></iconify-icon>0</span>
-                            </div>
-                            <p class="text-danger">$100.00</p>
-                            <button
-                                class=" btn-successs mt-auto text-white  fw-bold border-0 rounded-3 py-2 mt-3"><iconify-icon
-                                    class="fs-5 mt-1 me-3" icon="mynaui:cart-solid"></iconify-icon>Add to cart</button>
-                        </div>
                     </div>
-
                 </div>
-
-
             </div>
 
 
-        </div>
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-1 d-none d-sm-none d-lg-block"></div>
-                <div class="col-lg-2 mb-4  d-none d-sm-none d-lg-block">
-                    <div class=" text-center h-100 card-hover">
-                        <div class="image-container position-relative">
-                            <img src="./images/product-05-291x291.jpg" class="card-img-top main-image"
-                                alt="Garlic Granules">
-                            <img src="./images/product-04-291x291.jpg" class="card-img-top second-image"
-                                alt="Alternate Image">
-                            <div class=" icon-overlay my-1 mx-2">
-                                <div
-                                    class="bg-white border-top border-secondary d-flex justify-content-around align-items-center py-2">
-                                    <div>
-                                        <iconify-icon class="me-1" icon="mdi:heart-outline"></iconify-icon> Wishlist
-                                    </div>
-                                    <div>
-                                        <iconify-icon icon="carbon:view"></iconify-icon> Quickview
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <button
-                            class="border bg-white rounded-3  text-black mt-4 d-flex justify-content-start align-items-center px-4">
-                            Urban Foody
-                        </button>
+            <!-- Third Card -->
+            <div class="col-lg-2 col-md-4  mb-4 col-6 d-md-block d-lg-block">
+                <div class="text-center  card-hover">
+                    <div class="image-container cursor-pointer position-relative">
+                        <img src="./images/product-03-291x291.jpg" class="card-img-top main-image" alt="Lime Zest">
+                        <img src="./images/product-02-291x291.jpg" class="card-img-top second-image"
+                            alt="Alternate Image">
 
-                        <div class="card-body d-flex flex-column text-start">
-                            <h6 class="card-title mt-2">Tesco Coconut</h6>
-                            <p class="card-text">Iceberg Foods</p>
-                            <p class="card-text">450g</p>
-                            <div class="mb-2">
-                                <span><iconify-icon class="fs-5" icon="openmoji:star"></iconify-icon><iconify-icon
-                                        class="fs-5" icon="openmoji:star"></iconify-icon><iconify-icon class="fs-5"
-                                        icon="mdi-light:star"></iconify-icon><iconify-icon class="fs-5"
-                                        icon="mdi-light:star"></iconify-icon><iconify-icon class="fs-5 me-1"
-                                        icon="mdi-light:star"></iconify-icon>0</span>
-                            </div>
-                            <p class="text-danger">$80.00</p>
-                            <button
-                                class=" btn-successs mt-auto text-white  fw-bold border-0 rounded-3 py-2"><iconify-icon
-                                    class="fs-5 mt-1 me-3" icon="mynaui:cart-solid"></iconify-icon>Add to cart</button>
-                        </div>
+                    </div>
+                    <button
+                        class="border bg-white rounded-3  text-black mt-4 d-flex justify-content-start align-items-center px-4">
+                        fusion foods
+                    </button>
+
+                    <div class="card-body d-flex flex-column text-start">
+                        <h6 class="card-title mt-2">Tesco Green Seedless</h6>
+                        <p class="card-text">450g</p>
+                        <span><iconify-icon class="fs-5" icon="openmoji:star"></iconify-icon><iconify-icon class="fs-5"
+                                icon="openmoji:star"></iconify-icon><iconify-icon class="fs-5"
+                                icon="openmoji:star"></iconify-icon><iconify-icon class="fs-5"
+                                icon="openmoji:star"></iconify-icon><iconify-icon class="fs-5 me-1"
+                                icon="openmoji:star"></iconify-icon>1</span>
+                        <p class="text-danger mt-2">$40.00</p>
+                        <button class="btn btn-success text-white fw-bold px-4 add-to-cart-btn"
+                            data-name="Tesco Green Seedless" data-price="40.00"
+                            data-img="./images/product-03-291x291.jpg" data-made="Betterfoods">
+                            <iconify-icon icon="bxs:cart"></iconify-icon>
+                            <span class="fw-semibold">Add to cart</span>
+                        </button>
                     </div>
                 </div>
-                <!-- Second Card -->
-                <div class="col-lg-2 d-sm-block d-md-none col-6 mb-4 d-lg-block">
-                    <div class=" text-center h-100 card-hover bg-0">
+            </div>
 
-                        <div class="image-container position-relative">
-                            <img src="./images/product-06-291x291.jpg" class="card-img-top main-image"
-                                alt="Orange Peel Zest">
-                            <img src="./images/product-07-291x291.jpg" class="card-img-top second-image"
-                                alt="Alternate Image">
-                            <div class=" icon-overlay my-1 mx-2">
-                                <div
-                                    class="bg-white border-top border-secondary mt-5 d-flex justify-content-around align-items-center ">
-                                    <div>
-                                        <iconify-icon class="me-1" icon="mdi:heart-outline"></iconify-icon> Wishlist
-                                    </div>
-                                    <div>
-                                        <iconify-icon icon="carbon:view"></iconify-icon> Quickview
-                                    </div>
-                                </div>
-                            </div>
+            <!-- Fourth Card -->
+            <div class="col-lg-2 col-md-4 col-6 mb-4 d-lg-block">
+                <div class=" text-center  card-hover">
+                    <div class="image-container cursor-pointer position-relative">
+                        <img src="./images/product-04-291x291.jpg" class="card-img-top main-image" alt="Ginger Spice">
+                        <img src="./images/product-07-291x291.jpg" class="card-img-top second-image"
+                            alt="Alternate Image">
+
+                    </div>
+                    <button
+                        class="border bg-white rounded-3  text-black mt-4 d-flex justify-content-start align-items-center px-4">
+                        Holy Roots
+                    </button>
+
+                    <div class="card-body d-flex flex-column text-start">
+                        <h6 class="card-title mt-2">Waterfi SwimActive</h6>
+                        <p class="card-text">350g</p>
+                        <div class="mb-2">
+                            <span><iconify-icon class="fs-5" icon="openmoji:star"></iconify-icon>
+                                <iconify-icon class="fs-5" icon="mdi-light:star"></iconify-icon><iconify-icon
+                                    class="fs-5" icon="mdi-light:star"></iconify-icon><iconify-icon class="fs-5"
+                                    icon="mdi-light:star"></iconify-icon><iconify-icon class="fs-5 me-1"
+                                    icon="mdi-light:star"></iconify-icon>0</span>
                         </div>
-                        <button
-                            class="border bg-white rounded-3  text-black mt-4 d-flex justify-content-start align-items-center px-4">
-                            Betterfoods
+                        <p class="text-danger">$100.00</p>
+                        <button class="btn btn-success text-white fw-bold px-4 add-to-cart-btn"
+                            data-name="Waterfi SwimActive" data-price="100.00"
+                            data-img="./images/product-04-291x291.jpg" data-made="Betterfoods">
+                            <iconify-icon icon="bxs:cart"></iconify-icon>
+                            <span class="fw-semibold">Add to cart</span>
                         </button>
-
-
-                        <div class="card-body d-flex flex-column text-start">
-
-                            <h6 class="card-title  mt-2">Zesco Ripe Bananas</h6>
-                            <p class="card-text">Betterfoods</p>
-                            <p class="card-text">350g</p>
-                            <div class="mb-2">
-                                <span><iconify-icon class="fs-5" icon="openmoji:star"></iconify-icon><iconify-icon
-                                        class="fs-5" icon="openmoji:star"></iconify-icon><iconify-icon class="fs-5"
-                                        icon="openmoji:star"></iconify-icon><iconify-icon class="fs-5"
-                                        icon="openmoji:star"></iconify-icon><iconify-icon class="fs-5 me-1"
-                                        icon="mdi-light:star"></iconify-icon>3</span>
-                            </div>
-                            <p class="text-danger">$120.00</p>
-                            <button
-                                class=" btn-successs mt-auto text-white  fw-bold border-0 rounded-3 py-2"><iconify-icon
-                                    class="fs-5 mt-1 me-3" icon="mynaui:cart-solid"></iconify-icon>Add to cart</button>
-                        </div>
                     </div>
                 </div>
+            </div>
 
-                <!-- Third Card -->
-                <div class="col-lg-2 col-md-4  mb-4 col-6 d-lg-block">
-                    <div class="text-center h-100 card-hover">
-                        <div class="image-container position-relative">
-                            <img src="./images/product-07-291x291.jpg" class="card-img-top main-image" alt="Lemon Zest">
-                            <img src="./images/product-04-291x291.jpg" class="card-img-top second-image"
-                                alt="Alternate Image">
-                            <div class=" icon-overlay my-1 mx-2">
-                                <div
-                                    class="bg-white border-top border-secondary d-flex justify-content-around align-items-center py-2">
-                                    <div>
-                                        <iconify-icon class="me-1" icon="mdi:heart-outline"></iconify-icon> Wishlist
-                                    </div>
-                                    <div>
-                                        <iconify-icon icon="carbon:view"></iconify-icon> Quickview
-                                    </div>
-                                </div>
-                            </div>
+            <!-- Fifth Card -->
+            <div  class="col-lg-2 col-md-4 col-6 mb-4 d-lg-block">
+                <div class=" text-center  card-hover">
+                    <div class="image-container cursor-pointer position-relative">
+                        <img src="./images/product-05-291x291.jpg" class="card-img-top main-image"
+                            alt="Garlic Granules">
+                        <img src="./images/product-04-291x291.jpg" class="card-img-top second-image"
+                            alt="Alternate Image">
+
+                    </div>
+                    <button
+                        class="border bg-white rounded-3  text-black mt-4 d-flex justify-content-start align-items-center px-4">
+                        Urban Foody
+                    </button>
+
+                    <div class="card-body d-flex flex-column text-start">
+                        <h6 class="card-title mt-2">Tesco Coconut</h6>
+                        <p class="card-text">450g</p>
+                        <div class="mb-2">
+                            <span><iconify-icon class="fs-5" icon="openmoji:star"></iconify-icon><iconify-icon
+                                    class="fs-5" icon="openmoji:star"></iconify-icon><iconify-icon class="fs-5"
+                                    icon="mdi-light:star"></iconify-icon><iconify-icon class="fs-5"
+                                    icon="mdi-light:star"></iconify-icon><iconify-icon class="fs-5 me-1"
+                                    icon="mdi-light:star"></iconify-icon>0</span>
                         </div>
-                        <button
-                            class="border bg-white rounded-3  text-black mt-4 d-flex justify-content-start align-items-center px-4">
-                            Iceberg Foods
+                        <p class="text-danger">$80.00</p>
+
+                        <button class="btn btn-success text-white fw-bold px-4 add-to-cart-btn"
+                            data-name="Tesco Coconut" data-price="80.00" data-made="Betterfoods"
+                            data-img="./images/product-05-291x291.jpg">
+                            <iconify-icon icon="bxs:cart"></iconify-icon>
+                            <span class="fw-semibold">Add to cart</span>
                         </button>
-
-                        <div class="card-body d-flex flex-column text-start">
-                            <h6 class="card-title mt-2">Orange Peel Zest</h6>
-                            <p class="card-text">Iceberg Foods</p>
-                            <p class="card-text">350g</p>
-                            <div class="mb-2">
-                                <span><iconify-icon class="fs-5" icon="openmoji:star"></iconify-icon><iconify-icon
-                                        class="fs-5" icon="openmoji:star"></iconify-icon><iconify-icon class="fs-5 "
-                                        icon="mdi-light:star"></iconify-icon><iconify-icon class="fs-5 "
-                                        icon="mdi-light:star"></iconify-icon><iconify-icon class="fs-5 me-1"
-                                        icon="mdi-light:star"></iconify-icon>0</span>
-                            </div>
-                            <p class="text-danger">$45.00</p>
-                            <button
-                                class=" btn-successs mt-auto text-white  fw-bold border-0 rounded-3 py-2"><iconify-icon
-                                    class="fs-5 mt-1 me-3" icon="mynaui:cart-solid"></iconify-icon>Add to cart</button>
-                        </div>
                     </div>
                 </div>
+            </div>
+    </div>
+</div>
 
-                <!-- Fourth Card -->
-                <div class="col-lg-2 col-md-4 col-6 mb-4 d-lg-block">
-                    <div class="text-center h-100 card-hover">
-                        <div class="image-container position-relative">
-                            <img src="./images/product-08-291x291.jpg" class="card-img-top main-image" alt="Lime Zest">
-                            <img src="./images/product-07-291x291.jpg" class="card-img-top second-image"
-                                alt="Alternate Image">
-                            <div class=" icon-overlay my-1 mx-2">
-                                <div
-                                    class="bg-white border-top border-secondary d-flex justify-content-around align-items-center py-2">
-                                    <div>
-                                        <iconify-icon class="me-1" icon="mdi:heart-outline"></iconify-icon> Wishlist
-                                    </div>
-                                    <div>
-                                        <iconify-icon icon="carbon:view"></iconify-icon> Quickview
-                                    </div>
-                                </div>
-                            </div>
+
+    <div class="container mt-2">
+        <div class="row">
+            <div class="col-lg-1 d-none d-sm-none d-lg-block"></div>
+            <div class="col-lg-2 mb-4  d-none d-sm-none d-lg-block">
+                <div class=" text-center  card-hover">
+                    <div class="image-container position-relative">
+                        <img src="./images/product-05-291x291.jpg" class="card-img-top main-image"
+                            alt="Garlic Granules">
+                        <img src="./images/product-04-291x291.jpg" class="card-img-top second-image"
+                            alt="Alternate Image">
+
+                    </div>
+                    <button
+                        class="border bg-white rounded-3  text-black mt-4 d-flex justify-content-start align-items-center px-4">
+                        Urban Foody
+                    </button>
+
+                    <div class="card-body d-flex flex-column text-start">
+                        <h6 class="card-title mt-2">Tescot Coconut</h6>
+                        <p class="card-text">450g</p>
+                        <div class="mb-2">
+                            <span><iconify-icon class="fs-5" icon="openmoji:star"></iconify-icon><iconify-icon
+                                    class="fs-5" icon="openmoji:star"></iconify-icon><iconify-icon class="fs-5"
+                                    icon="mdi-light:star"></iconify-icon><iconify-icon class="fs-5"
+                                    icon="mdi-light:star"></iconify-icon><iconify-icon class="fs-5 me-1"
+                                    icon="mdi-light:star"></iconify-icon>0</span>
                         </div>
-                        <button
-                            class="border bg-white rounded-3  text-black mt-4 d-flex justify-content-start align-items-center px-4">
-                            fusion foods
+                        <p class="text-danger">$80.00</p>
+                        <button class="btn btn-success text-white fw-bold px-4 add-to-cart-btn"
+                            data-name="Tescot Coconut" data-price="80.00" data-made="Betterfoods"
+                            data-img="./images/product-05-291x291.jpg">
+                            <iconify-icon icon="bxs:cart"></iconify-icon>
+                            <span class="fw-semibold">Add to cart</span>
                         </button>
 
-                        <div class="card-body d-flex flex-column text-start">
-                            <h6 class="card-title mt-2">Tesco Green Seedless</h6>
-                            <p class="card-text">Fusion Foods</p>
-                            <p class="card-text">450g</p>
+                    </div>
+                </div>
+            </div>
+            <!-- Second Card -->
+            <div class="col-lg-2 col-md-4 col-6 mb-4 d-lg-block">
+                <div class=" text-center  card-hover bg-0">
+
+                    <div class="image-container position-relative">
+                        <img src="./images/product-06-291x291.jpg" class="card-img-top main-image"
+                            alt="Orange Peel Zest">
+                        <img src="./images/product-07-291x291.jpg" class="card-img-top second-image"
+                            alt="Alternate Image">
+
+                    </div>
+                    <button
+                        class="border bg-white rounded-3  text-black mt-4 d-flex justify-content-start align-items-center px-4">
+                        Betterfoods
+                    </button>
+
+
+                    <div class="card-body d-flex flex-column text-start">
+
+                        <h6 class="card-title  mt-2">Tesco Yellow Flesh Kiwi</h6>
+                        <p class="card-text">350g</p>
+                        <div class="mb-2">
                             <span><iconify-icon class="fs-5" icon="openmoji:star"></iconify-icon><iconify-icon
                                     class="fs-5" icon="openmoji:star"></iconify-icon><iconify-icon class="fs-5"
                                     icon="openmoji:star"></iconify-icon><iconify-icon class="fs-5"
                                     icon="openmoji:star"></iconify-icon><iconify-icon class="fs-5 me-1"
-                                    icon="openmoji:star"></iconify-icon>1</span>
-                            <p class="text-danger mt-2">$40.00</p>
-                            <button
-                                class=" btn-successs mt-auto text-white  fw-bold border-0 rounded-3 py-2"><iconify-icon
-                                    class="fs-5 mt-1 me-3" icon="mynaui:cart-solid"></iconify-icon>Read more</button>
+                                    icon="mdi-light:star"></iconify-icon>3</span>
                         </div>
-                    </div>
-                </div>
-
-                <!-- fifth card -->
-                <div class="col-lg-2 col-md-4 col-6 mb-4 d-lg-block">
-                    <div class=" text-center h-100 card-hover">
-                        <div class="image-container position-relative">
-                            <img src="./images/product-09-291x291.jpg" class="card-img-top main-image"
-                                alt="Ginger Spice">
-                            <img src="./images/product-10-291x291.jpg" class="card-img-top second-image"
-                                alt="Alternate Image">
-                            <div class=" icon-overlay my-1 mx-2">
-                                <div
-                                    class="bg-white border-top border-secondary d-flex justify-content-around align-items-center py-2">
-                                    <div>
-                                        <iconify-icon class="me-1" icon="mdi:heart-outline"></iconify-icon> Wishlist
-                                    </div>
-                                    <div>
-                                        <iconify-icon icon="carbon:view"></iconify-icon> Quickview
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <button
-                            class="border bg-white rounded-3  text-black mt-4 d-flex justify-content-start align-items-center px-4">
-                            Holy Roots
+                        <p class="text-danger">$85.00</p>
+                        <button class="btn btn-success text-white fw-bold px-4 add-to-cart-btn"
+                            data-name="Tesco Yellow Flesh Kiwi" data-price="85.00" data-made="Betterfoods"
+                            data-img="./images/product-06-291x291.jpg">
+                            <iconify-icon icon="bxs:cart"></iconify-icon>
+                            <span class="fw-semibold">Add to cart</span>
                         </button>
-
-                        <div class="card-body d-flex flex-column text-start">
-                            <h6 class="card-title mt-2">Waterfi SwimActive</h6>
-                            <p class="card-text">Holy Roots</p>
-                            <p class="card-text">350g</p>
-                            <div class="mb-2">
-                                <span><iconify-icon class="fs-5" icon="openmoji:star"></iconify-icon>
-                                    <iconify-icon class="fs-5" icon="mdi-light:star"></iconify-icon><iconify-icon
-                                        class="fs-5" icon="mdi-light:star"></iconify-icon><iconify-icon class="fs-5"
-                                        icon="mdi-light:star"></iconify-icon><iconify-icon class="fs-5 me-1"
-                                        icon="mdi-light:star"></iconify-icon>0</span>
-                            </div>
-                            <p class="text-danger">$100.00</p>
-                            <button
-                                class=" btn-successs mt-auto text-white  fw-bold border-0 rounded-3 py-2"><iconify-icon
-                                    class="fs-5 mt-1 me-3" icon="mynaui:cart-solid"></iconify-icon>Add to cart</button>
-                        </div>
                     </div>
                 </div>
-
-                <div class="col-lg-1 d-none d-sm-none d-lg-block"></div>
             </div>
+
+            <!-- Third Card -->
+            <div class="col-lg-2 col-md-4 col-6 mb-4 d-lg-block">
+                <div class="text-center card-hover">
+                    <div class="image-container position-relative">
+                        <img src="./images/product-07-291x291.jpg" class="card-img-top main-image" alt="Lemon Zest">
+                        <img src="./images/product-04-291x291.jpg" class="card-img-top second-image"
+                            alt="Alternate Image">
+
+                    </div>
+                    <button
+                        class="border bg-white rounded-3  text-black mt-4 d-flex justify-content-start align-items-center px-4">
+                        Iceberg Foods
+                    </button>
+
+                    <div class="card-body d-flex flex-column text-start">
+                        <h6 class="card-title mt-2">Tesco Large Cherries</h6>
+                        <p class="card-text">350g</p>
+                        <div class="mb-2">
+                            <span><iconify-icon class="fs-5" icon="openmoji:star"></iconify-icon><iconify-icon
+                                    class="fs-5" icon="openmoji:star"></iconify-icon><iconify-icon class="fs-5 "
+                                    icon="mdi-light:star"></iconify-icon><iconify-icon class="fs-5 "
+                                    icon="mdi-light:star"></iconify-icon><iconify-icon class="fs-5 me-1"
+                                    icon="mdi-light:star"></iconify-icon>0</span>
+                        </div>
+                        <p class="text-danger">$100.00</p>
+                        <button class="btn btn-success text-white fw-bold px-4 add-to-cart-btn"
+                            data-name="Tesco Large Cherries" data-price="100.00" data-made="Betterfoods"
+                            data-img="./images/product-07-291x291.jpg">
+                            <iconify-icon icon="bxs:cart"></iconify-icon>
+                            <span class="fw-semibold">Add to cart</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Fourth Card -->
+            <div class="col-lg-2 col-md-4 col-6 mb-4 d-lg-block">
+                <div class="text-center card-hover">
+                    <div class="image-container position-relative">
+                        <img src="./images/product-08-291x291.jpg" class="card-img-top main-image" alt="Lime Zest">
+                        <img src="./images/product-07-291x291.jpg" class="card-img-top second-image"
+                            alt="Alternate Image">
+
+                    </div>
+                    <button
+                        class="border bg-white rounded-3  text-black mt-4 d-flex justify-content-start align-items-center px-4">
+                        fusion foods
+                    </button>
+
+                    <div class="card-body d-flex flex-column text-start">
+                        <h6 class="card-title mt-2">Tesco Braeburn Appl</h6>
+                        <p class="card-text">450g</p>
+                        <span><iconify-icon class="fs-5" icon="openmoji:star"></iconify-icon><iconify-icon class="fs-5"
+                                icon="openmoji:star"></iconify-icon><iconify-icon class="fs-5"
+                                icon="openmoji:star"></iconify-icon><iconify-icon class="fs-5"
+                                icon="openmoji:star"></iconify-icon><iconify-icon class="fs-5 me-1"
+                                icon="openmoji:star"></iconify-icon>1</span>
+                        <p class="text-danger mt-2">$100.00</p>
+                        <button class="btn btn-success text-white fw-bold px-4 add-to-cart-btn"
+                            data-name="Tesco Braeburn Appl" data-price="100.00" data-made="Betterfoods"
+                            data-img="./images/product-08-291x291.jpg">
+                            <iconify-icon icon="bxs:cart"></iconify-icon>
+                            <span class="fw-semibold">Add to cart</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- fifth card -->
+            <div class="col-lg-2 col-md-4 col-6 mb-4 d-lg-block">
+                <div class=" text-center card-hover">
+                    <div class="image-container position-relative">
+                        <img src="./images/product-09-291x291.jpg" class="card-img-top main-image" alt="Ginger Spice">
+                        <img src="./images/product-10-291x291.jpg" class="card-img-top second-image"
+                            alt="Alternate Image">
+
+                    </div>
+                    <button
+                        class="border bg-white rounded-3  text-black mt-4 d-flex justify-content-start align-items-center px-4">
+                        Holy Roots
+                    </button>
+
+                    <div class="card-body d-flex flex-column text-start">
+                        <h6 class="card-title mt-2">Tesco Kanzi Apples</h6>
+                        <p class="card-text">350g</p>
+                        <div class="mb-2">
+                            <span><iconify-icon class="fs-5" icon="openmoji:star"></iconify-icon>
+                                <iconify-icon class="fs-5" icon="mdi-light:star"></iconify-icon><iconify-icon
+                                    class="fs-5" icon="mdi-light:star"></iconify-icon><iconify-icon class="fs-5"
+                                    icon="mdi-light:star"></iconify-icon><iconify-icon class="fs-5 me-1"
+                                    icon="mdi-light:star"></iconify-icon>0</span>
+                        </div>
+                        <p class="text-danger">$90.00</p>
+                        <button class="btn btn-success text-white fw-bold px-4 add-to-cart-btn"
+                            data-name="Tesco Kanzi Apples" data-price="90.00" data-made="Betterfoods"
+                            data-img="./images/product-09-291x291.jpg">
+                            <iconify-icon icon="bxs:cart"></iconify-icon>
+                            <span class="fw-semibold">Add to cart</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-1 d-none d-sm-none d-lg-block"></div>
         </div>
     </div>
 
@@ -1372,15 +1271,18 @@
                 <!-- First section: Logo and contact details -->
                 <div class="col-lg-4 col-md-12 col-12 mb-4 text-start">
                     <img class="img-fluid" src="./images/logo.svg" alt="">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque id luctus mauris, eget varius libero. Vestibulum metus leo.</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque id luctus mauris, eget varius
+                        libero. Vestibulum metus leo.</p>
                     <p class="text-success fs-5">
-                        <iconify-icon class="me-2 fs-5 text-black" icon="ic:outline-email"></iconify-icon>contact@example.com
+                        <iconify-icon class="me-2 fs-5 text-black"
+                            icon="ic:outline-email"></iconify-icon>contact@example.com
                     </p>
                     <p>
                         <iconify-icon class="me-2 fs-5 text-black" icon="line-md:phone"></iconify-icon>+884 123 456 789
                     </p>
                     <p>
-                        <iconify-icon class="me-2 fs-5 text-black" icon="material-symbols:house"></iconify-icon>70 West Buckingham Ave, NY 11735
+                        <iconify-icon class="me-2 fs-5 text-black" icon="material-symbols:house"></iconify-icon>70 West
+                        Buckingham Ave, NY 11735
                     </p>
                     <div class="d-flex justify-content-start">
                         <a href="#" class="me-3 bg-light text-black p-1 px-2 rounded-circle">
@@ -1397,7 +1299,7 @@
                         </a>
                     </div>
                 </div>
-    
+
                 <!-- Second section: About -->
                 <div class="col-lg-2 col-md-6 col-12 mb-4 text-start">
                     <h5 class="fw-bold">ABOUT</h5>
@@ -1405,7 +1307,7 @@
                     <a href="#" class="text-dark text-decoration-none">Contact Us</a><br>
                     <a href="#" class="text-dark text-decoration-none">Help Center</a>
                 </div>
-    
+
                 <!-- Third section: Help & Guide -->
                 <div class="col-lg-3 col-md-6 col-12 mb-4 text-start">
                     <h5 class="fw-bold">HELP & GUIDE</h5>
@@ -1413,22 +1315,24 @@
                     <a href="#" class="text-dark text-decoration-none">Privacy Policy</a><br>
                     <a href="#" class="text-dark text-decoration-none">Shipping & Delivery</a>
                 </div>
-    
+
                 <!-- Fourth section: Newsletter -->
                 <div class="col-lg-3 col-md-12 col-12 mb-4 text-start">
                     <h5 class="fw-bold">NEWSLETTER</h5>
                     <p>Don’t miss out on thousands of great deals & promotions.</p>
                     <div class="mb-3">
                         <div class="input-group">
-                            <input type="email" class="form-control" placeholder="Email address..." aria-label="Email address">
+                            <input type="email" class="form-control" placeholder="Email address..."
+                                aria-label="Email address">
                         </div>
                         <div class="d-flex justify-content-start mt-2">
-                            <button class="border-0 rounded-2 fw-bold py-2 fs-5 px-3 btn-successs text-white" type="button">Subscribe</button>
+                            <button class="border-0 rounded-2 fw-bold py-2 fs-5 px-3 btn-successs text-white"
+                                type="button">Subscribe</button>
                         </div>
                     </div>
                 </div>
             </div>
-    
+
             <!-- Footer bottom section -->
             <div class="text-secondary py-5">
                 <div class="container">
@@ -1444,11 +1348,11 @@
             </div>
         </div>
     </footer>
-    
+
 
 
     <!-- Offcanvas Menu for Mobile and Tablet -->
-    <div class="offcanvas offcanvas-start w-" tabindex="-1" id="offcanvasMenu" aria-labelledby="offcanvasMenuLabel">
+    <div class="offcanvas offcanvas-start w-75" tabindex="-1" id="offcanvasMenu" aria-labelledby="offcanvasMenuLabel">
         <div class="offcanvas-header">
             <h5 class="offcanvas-title" id="offcanvasMenuLabel">Menu</h5>
             <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
@@ -1486,6 +1390,98 @@
             </div>
         </div>
     </div>
+
+    <!-- add-to-cart offcanva -->
+    <div class="offcanvas offcanvas-end " tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+        <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="offcanvasRightLabel">Shopping Cart</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body" id="cartItems">
+            <div id="cartItems"></div>
+            <span id="cartQuantityBadge"></span>
+            <div id="totalPrice"></div>
+            <!-- Cart items will appear here -->
+            <p>Empty!</p>
+        </div>
+        <!-- add to cart section footer -->
+        <div class="offcanvas-footer container mb-5">
+            <hr />
+            <div class="d-flex justify-content-between">
+                <strong class="text-black-50">Total:</strong>
+                <strong id="totalPrices">$0.00</strong>
+            </div>
+            <div class="d-flex justify-content-between mt-2">
+
+            </div>
+        </div>
+    </div>
+
+
+
+
+ 
+
+    
+    
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <script src="./JS/add-to-cart.js"></script>
 </body>
 
 </html>

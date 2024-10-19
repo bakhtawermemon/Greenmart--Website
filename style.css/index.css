@@ -1,8 +1,25 @@
+@import url('https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    font-family: "Public Sans", sans-serif; 
+}
+
 .bg-img {
     background-image: url(../images/bg-home1-01.jpg);
     background-size: cover;
     background-position: center;
     height: auto;
+}
+
+@media (max-width: 575.98px) {
+   
+    .carousel-item {
+        height: 60vh;
+
+    }
+    .carousel-item img {
+        height: 60vh;
+    }
 }
 
 .btn-successs {
@@ -19,18 +36,6 @@
 }
 .card-hover {
     border: none;
-}
-
-.card-hover:hover {
-    border: 2px solid #ddd;
-    padding: 0px 10px;
-}
-.icon-overlay {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    display: none;
 }
 
 .image-container:hover .icon-overlay {
