@@ -50,38 +50,46 @@
     </div>
 
     <!-- Header Section -->
-    <header class=" position-sticky top-0 z-1 bg-white ">
+
+    <header class="position-sticky top-0 z-1 bg-white">
         <div class="container py-3">
-            <div class="row align-items-center">
-
-                <div class="col-6 col-lg-2 d-none d-lg-block d-flex align-items-center">
-                    <img src="./images/logo.svg" alt="Logo" class="me-2">
-
+            <div class="row align-items-center justify-content-between">
+               
+                <div class="col-2 d-flex justify-content-start align-items-center p-2 d-lg-none">
+                    <button class="btn btn-outline-secondary" type="button" data-bs-toggle="offcanvas"
+                        data-bs-target="#offcanvasMenu">
+                        <iconify-icon icon="mingcute:menu-fill"></iconify-icon>
+                    </button>
                 </div>
 
+          
+                <div class="col-4 col-lg-2 d-flex justify-content-start">
+                    <img class="img-fluid" src="./images/logo.svg" alt="Logo" class="ms-0">
+                </div>
 
+                
                 <div class="col-lg-4 d-none d-lg-flex">
                     <div class="input-group">
                         <input type="text" class="form-control" placeholder="Search for...">
-                        <button class="btn btn-outline-secondary " type="button" id="button-search">
+                        <button class="btn btn-outline-secondary" type="button">
                             <iconify-icon icon="basil:search-outline"></iconify-icon>
                         </button>
                     </div>
                 </div>
 
-                <div class="col-lg-6 d-none d-lg-flex justify-content-end">
-                    <div class="d-flex align-items-center">
-                        <div class="text-center me-4">
-                            <span class="fw-bold">
-                                Online Shopping</span>
-                            <div class="d-flex align-items-center">
-                                <iconify-icon class="fs-3 me-3 text-success"
-                                    icon="mynaui:telephone-solid"></iconify-icon>
-
-                                <span>+78 925-942-2900</span>
-                            </div>
+                
+                <div class="col-6 col-lg-6 d-flex justify-content-end align-items-center">
+                
+                    <div class="text-center me-4 d-none d-lg-block">
+                        <span class="fw-bold">Online Shopping</span>
+                        <div class="d-flex align-items-center">
+                            <iconify-icon class="fs-3 me-2 text-success" icon="mynaui:telephone-solid"></iconify-icon>
+                            <span>+78 925-942-2900</span>
                         </div>
-                        <div class="text-center me-4">
+                    </div>
+
+                    <div class="d-flex align-items-center">
+                        <div class="text-center me-4 d-none d-lg-block">
                             <span class="fw-bold">Account</span>
                             <div class="d-flex align-items-center">
                                 <iconify-icon class="fs-3 me-3 text-success" icon="mdi:account"></iconify-icon>
@@ -89,68 +97,39 @@
                                         href="./Pages/register.html" class="text-black">Register</a></span>
                             </div>
                         </div>
-                        <div class="d-flex align-items-center bg-success text-white rounded-3 px-4 py-2 me-1">
-                            <div class="position-relative " type="button" data-bs-toggle="offcanvas"
+
+                        <div class="d-flex align-items-center bg-success text-white rounded-3 px-4 py-2 ms-5">
+                            <div class="position-relative" type="button" data-bs-toggle="offcanvas"
                                 data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">
-                                <iconify-icon class="position-relative" icon="mdi:shopping-cart" width="20" height="20"
-                                    style="color: white"></iconify-icon>
+                                <iconify-icon icon="mdi:shopping-cart" width="20" height="20"
+                                    style="color: white;"></iconify-icon>
                                 <span id="cartQuantityBadge"
-                                    class="position-absolute top-0 start-100 translate-middle badge border border-light rounded-circle bg-warning ">0</span>
+                                    class="position-absolute top-0 start-100 translate-middle badge border border-light rounded-circle bg-warning">0</span>
                             </div>
-                            <h6 id="totalPrice" class="mb-0 ms-4 ">Cart <br><span>$0.00</span></h6>
+                            <h6 id="totalPrice" class="mb-0 ms-2 d-none d-lg-block">Cart <br><span>$0.00</span></h6>
+                        </div>
+
+                        <div class="ms-2 d-lg-none">
+                            <button class="btn" type="button" data-bs-toggle="offcanvas"
+                                data-bs-target="#offcanvasLogin" aria-controls="offcanvasLogin">
+                                <iconify-icon class="fs-1 rounded-circle bg-success mt-1 p-2 text-white fw-bold"
+                                    icon="arcticons:contacts-alt"></iconify-icon>
+                            </button>
                         </div>
                     </div>
                 </div>
-
-                <div class="container">
-                    <div class="row">
-                        <div class="d-lg-none col-6 d-flex justify-content-between align-items-center p-2">
-                            <div class="text-start">
-                                <button class="btn btn-outline-secondary" type="button" data-bs-toggle="offcanvas"
-                                    data-bs-target="#offcanvasMenu">
-                                    <iconify-icon icon="mingcute:menu-fill"></iconify-icon>
-                                </button>
-                            </div>
-                            <div>
-                                <img class="ms-1" src="./images/logo.svg" alt="Logo" class="me-2">
-                            </div>
-                        </div>
-                
-                        <div class="d-lg-none col-6 text-end d-flex justify-content-end align-items-center">
-                           
-                            <div class="position-relative " type="button" data-bs-toggle="offcanvas"
-                            data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">
-                            <iconify-icon class="position-relative text-black fs-1" icon="mdi:shopping-cart" ></iconify-icon>
-                            <span id="cartQuantityBadge"
-                                class="position-absolute top-0 start-100 translate-middle badge border border-light rounded-circle bg-warning ">0</span>
-                        </div>
-                       
-                            <div>
-                                <button class="btn" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasLogin"
-                                    aria-controls="offcanvasLogin">
-                                    <iconify-icon class="fs-1 rounded-circle bg-success mt-1 p-2 text-white fw-bold"
-                                        icon="arcticons:contacts-alt"></iconify-icon>
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                
-                
-                
-                
-
-                    
-                    
-                </div>
-
-
-
             </div>
         </div>
     </header>
 
-   
+
+
+
+
+
+
+
+
 
 
 
@@ -215,53 +194,55 @@
 
     <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="true">
         <div class="carousel-indicators">
-          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
-            aria-current="true" aria-label="Slide 1"></button>
-          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
-            aria-label="Slide 2"></button>
-    
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
+                aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+                aria-label="Slide 2"></button>
+
         </div>
         <div class="carousel-inner">
-          <div class="carousel-item active position-relative">
-            <!-- <img src="./images/hero2.jfif" class="d-block w-100 hero-img" alt="picture"> -->
-            <img src="./images/hero-img1.jpg" class="img-fluid w-100" style="object-fit: cover;" alt="Hero Image">
-    
-            <div class="container position-absolute top-50 start-50 translate-middle text-white text-end  my-md-4">
-              <h1 class="display-6 fw-bold ">Farm Fresh <span class="fw-normal">Vegetables & <br>Food</span>100% Organic
-              </h1>
-              <p class="fw-bold">Always Fresh organic products for you.</p>
-              <a href="#" class="btn btn-warning mb-md-5">Shop Now</a>
+            <div class="carousel-item active position-relative">
+                <!-- <img src="./images/hero2.jfif" class="d-block w-100 hero-img" alt="picture"> -->
+                <img src="./images/hero-img1.jpg" class="img-fluid w-100" style="object-fit: cover;" alt="Hero Image">
+
+                <div class="container position-absolute top-50 start-50 translate-middle text-white text-end  my-md-4">
+                    <h1 class="display-6 fw-bold ">Farm Fresh <span class="fw-normal">Vegetables & <br>Food</span>100%
+                        Organic
+                    </h1>
+                    <p class="fw-bold">Always Fresh organic products for you.</p>
+                    <a href="#" class="btn btn-warning mb-md-5">Shop Now</a>
+                </div>
+
+
             </div>
-    
-    
-          </div>
-    
-          <div class="carousel-item position-relative   ">
-            <!-- <img src="./images/hero.jfif" class="d-block w-100 hero-img" alt="picture"> -->
-            <img src="./images/heroimg-2.jpg" class="img-fluid w-100" style="object-fit: cover;" alt="Hero Image">
-            <div class="container position-absolute top-50 start-50 translate-middle text-white text-end">
-              <h1 class="display-6 fw-bold">Farm Fresh <span class="fw-normal">Meat & <br>Poultry</span>100% Organic</h1>
-              <p class="fw-bold">Always Fresh organic products for you.</p>
-              <a href="#" class="btn btn-warning mt-3">Shop Now</a>
+
+            <div class="carousel-item position-relative   ">
+                <!-- <img src="./images/hero.jfif" class="d-block w-100 hero-img" alt="picture"> -->
+                <img src="./images/heroimg-2.jpg" class="img-fluid w-100" style="object-fit: cover;" alt="Hero Image">
+                <div class="container position-absolute top-50 start-50 translate-middle text-white text-end">
+                    <h1 class="display-6 fw-bold">Farm Fresh <span class="fw-normal">Meat & <br>Poultry</span>100%
+                        Organic</h1>
+                    <p class="fw-bold">Always Fresh organic products for you.</p>
+                    <a href="#" class="btn btn-warning mt-3">Shop Now</a>
+                </div>
             </div>
-          </div>
-    
-    
-    
-    
+
+
+
+
         </div>
         <button class="carousel-control-prev " type="button" data-bs-target="#carouselExampleIndicators"
-          data-bs-slide="prev">
-          <span class="carousel-control-prev-icon " aria-hidden="true"></span>
-          <span class="visually-hidden ">Previous</span>
-    
+            data-bs-slide="prev">
+            <span class="carousel-control-prev-icon " aria-hidden="true"></span>
+            <span class="visually-hidden ">Previous</span>
+
         </button>
         <button class="carousel-control-next " type="button" data-bs-target="#carouselExampleIndicators"
-          data-bs-slide="next">
-          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Next</span>
+            data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
         </button>
-      </div>
+    </div>
 
     <div class="bg-light">
         <div class="text-center py-3">
@@ -979,7 +960,7 @@
             </div>
 
             <!-- Fifth Card -->
-            <div  class="col-lg-2 col-md-4 col-6 mb-4 d-lg-block">
+            <div class="col-lg-2 col-md-4 col-6 mb-4 d-lg-block">
                 <div class=" text-center  card-hover">
                     <div class="image-container cursor-pointer position-relative">
                         <img src="./images/product-05-291x291.jpg" class="card-img-top main-image"
@@ -1014,8 +995,8 @@
                     </div>
                 </div>
             </div>
+        </div>
     </div>
-</div>
 
 
     <div class="container mt-2">
@@ -1420,11 +1401,6 @@
 
 
 
- 
-
-    
-    
-    
 
 
 
@@ -1438,8 +1414,13 @@
 
 
 
-    
-    
+
+
+
+
+
+
+
 
 
 
