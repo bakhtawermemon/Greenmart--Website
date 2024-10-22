@@ -1145,7 +1145,7 @@
             </div>
 
             <!-- fifth card -->
-            <div class="col-lg-2 col-md-4 col-6 mb-4 d-lg-block">
+            <div class="col-lg-2 d-block d-md-none col-md-4 col-6 mb-4 d-lg-block">
                 <div class=" text-center card-hover">
                     <div class="image-container position-relative">
                         <img src="./images/product-09-291x291.jpg" class="card-img-top main-image" alt="Ginger Spice">
@@ -1373,30 +1373,24 @@
     </div>
 
     <!-- add-to-cart offcanva -->
-    <div class="offcanvas offcanvas-end " tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+    <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
         <div class="offcanvas-header">
             <h5 class="offcanvas-title" id="offcanvasRightLabel">Shopping Cart</h5>
             <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
         </div>
         <div class="offcanvas-body" id="cartItems">
             <div id="cartItems"></div>
-            <span id="cartQuantityBadge"></span>
-            <div id="totalPrice"></div>
-            <!-- Cart items will appear here -->
-            <p>Empty!</p>
         </div>
-        <!-- add to cart section footer -->
+    
         <div class="offcanvas-footer container mb-5">
             <hr />
             <div class="d-flex justify-content-between">
-                <strong class="text-black-50">Total:</strong>
+                <strong class="text-success">Total:</strong>
                 <strong id="totalPrices">$0.00</strong>
-            </div>
-            <div class="d-flex justify-content-between mt-2">
-
             </div>
         </div>
     </div>
+    
 
 
 
